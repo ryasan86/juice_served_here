@@ -94,3 +94,26 @@ a {
     padding: 2rem 3rem;
   }
 }
+
+/*============ Home ============*/
+.home {
+  height: 80vh;
+  width: 100%;
+  background: url('./../assets/images/hero-bg.png') no-repeat right top;
+  padding: 5em 5em;
+  & > .container {
+    & > .title {
+      font-size: 3.5em;
+      color: $dark;
+    }
+    & > .sub-title {
+      color: $dark;
+    }
+    & > .hero-button {
+      background: $orangered;
+      color: white;
+      border: none;
+      padding: 1.5rem 4rem;
+    }
+  }
+}
