@@ -1,9 +1,23 @@
 import './styles/index.scss';
 
-const navItems = document.querySelectorAll('.nav-item');
+const theme = {
+  dark: '#231f20',
+  orangered: '#f95951',
+};
 
-// navItems.forEach((navItem, i) => {
-//   navItem.addEventListener('click', e => {
-//     navItem.classList.add('active');
-//   });
-// });
+const navLinks = document.querySelectorAll('.nav-link');
+
+const onLinkClick = e => {
+  // deactivate active link
+  navLinks.forEach((navLink, i) => {
+    navLink.classList.remove('active');
+  });
+  // active new active link
+  e.target.classList.add('active');
+};
+
+const navList = document.querySelectorAll('.nav-list');
+
+navList.forEach(list => {
+  list.addEventListener('click', onLinkClick);
+});

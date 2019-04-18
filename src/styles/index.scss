@@ -71,8 +71,9 @@ button {
       grid-area: right;
     }
     & > .nav-item {
-      padding: 2rem 2rem;
-      & > .nav-link {
+      & > a {
+        @extend %flex-center;
+        padding: 2rem 2rem;
         &.active {
           color: $orangered;
         }
