@@ -38,3 +38,23 @@ $orangered: #f95951;
     font-size: 13px;
   }
 }
+
+%transparent-button {
+  border: 2px solid $orangered;
+  color: $orangered;
+  background-color: transparent;
+  &:hover {
+    background-color: $orangered;
+    color: white;
+  }
+}
+
+%orangered-button {
+  border: 2px solid $orangered;
+  color: white;
+  background-color: $orangered;
+  &:hover {
+    background-color: white;
+    color: $orangered;
+  }
+}

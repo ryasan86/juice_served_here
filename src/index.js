@@ -17,8 +17,8 @@ navLists.forEach(list => {
   list.addEventListener('click', onNavLinkClick);
 });
 
-/*============ Drinks ============*/
-const drinkItems = document.querySelectorAll('.drink-list li');
+/*============ Images with overlays on hover ============*/
+const drinkItems = document.querySelectorAll('.overlay-container');
 
 drinkItems.forEach(drinkItem => {
   // show overlay
@@ -31,24 +31,6 @@ drinkItems.forEach(drinkItem => {
   // hide overlay
   drinkItem.addEventListener('mouseleave', function() {
     overlay = this.lastElementChild;
-    overlay.style.visibility = 'hidden';
-  });
-});
-
-/*============ Locations ============*/
-const locationItems = document.querySelectorAll('.locations-list li');
-
-locationItems.forEach(locationItem => {
-  // show overlay
-  let overlay;
-
-  locationItem.addEventListener('mouseenter', function() {
-    overlay = this.firstElementChild.lastElementChild;
-    overlay.style.visibility = 'visible';
-  });
-
-  locationItem.addEventListener('mouseleave', function() {
-    overlay = this.firstElementChild.lastElementChild;
     overlay.style.visibility = 'hidden';
   });
 });
