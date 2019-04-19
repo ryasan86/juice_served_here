@@ -17,16 +17,16 @@ navLinks.forEach(link => {
 });
 
 /*============ Images with overlays hover ============*/
-const drinkItems = document.querySelectorAll('.overlay-container');
+const overlayContainers = document.querySelectorAll('.overlay-container');
 
-drinkItems.forEach(drinkItem => {
+overlayContainers.forEach(overlayContainer => {
   let overlay;
 
-  drinkItem.addEventListener('mouseenter', function() {
+  overlayContainer.addEventListener('mouseenter', function() {
     overlay = this.lastElementChild;
     overlay.style.visibility = 'visible';
   });
-  drinkItem.addEventListener('mouseleave', function() {
+  overlayContainer.addEventListener('mouseleave', function() {
     overlay = this.lastElementChild;
     overlay.style.visibility = 'hidden';
   });
