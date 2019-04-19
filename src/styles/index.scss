@@ -15,14 +15,15 @@ html {
 body {
   padding: 0;
   margin: 0;
-  line-height: 2;
   font-family: sans-serif;
+  line-height: 2;
   font-size: 1.2em;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+  cursor: pointer;
 }
 
 button {
@@ -54,10 +55,19 @@ ul {
 }
 
 /*============ Navigation Bar ============*/
+//colors
+$color_alabaster_approx: #f9f9f9;
+$black_20: rgba(0, 0, 0, 0.2);
+$color_celeste_approx: #ccc;
+$color_alto_approx: #ddd;
+
+// navbar
 .navbar {
   display: flex;
-  justify-content: space-between;
-  box-shadow: 1px 1px 1px lightgray;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.2em;
   @media (max-width: 1100px) {
     display: grid;
     grid-template-areas:
@@ -68,46 +78,110 @@ ul {
     grid-area: login;
     display: flex;
     align-items: center;
-    padding: 2rem 3rem;
-  }
-  & > .nav-list {
-    @extend %flex-center;
-    display: flex;
-    list-style-type: none;
-    &.left {
-      grid-area: left;
-    }
-    &.right {
-      grid-area: right;
-    }
-    & > li {
-      & > a {
-        @extend %flex-center;
-        padding: 2rem 2rem;
-        display: block;
-        white-space: nowrap;
-        &.active {
-          color: $orangered;
-        }
-      }
-    }
+    cursor: pointer;
   }
   .horizontal-logo {
     grid-area: logo;
     @extend %flex-center;
-    padding: 0 2rem;
   }
   .box-hover {
     grid-area: box;
     @extend %flex-center;
-    padding: 2rem 3rem;
     cursor: pointer;
   }
 }
 
+// left and right nav list
+.nav-list {
+  @extend %flex-center;
+  list-style-type: none;
+  &.left {
+    grid-area: left;
+  }
+  &.right {
+    grid-area: right;
+  }
+  & > li {
+    cursor: pointer;
+    & > a {
+      @extend %flex-center;
+      padding: 3em 1em;
+      display: block;
+      white-space: nowrap;
+      &.active {
+        color: $orangered;
+      }
+    }
+  }
+}
+
+// drop down
+.dropdown {
+  float: left;
+  overflow: hidden;
+  .dropbtn {
+    border: none;
+    outline: none;
+    padding: 3em 1em;
+    background-color: inherit;
+    font: inherit;
+    margin: 0;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: $color_alabaster_approx;
+    width: 100%;
+    left: 0;
+    box-shadow: 0 8px 16px 0 $black_20;
+    z-index: 1;
+    .header {
+      background: red;
+      padding: 16px;
+      color: white;
+    }
+  }
+  &:hover {
+    .dropbtn {
+      color: $orangered;
+    }
+    .dropdown-content {
+      display: block;
+    }
+  }
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  background-color: $color_celeste_approx;
+  height: 250px;
+  @media screen and(max-width: 600px) {
+    width: 100%;
+    height: auto;
+  }
+  a {
+    float: none;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    &:hover {
+      background-color: $color_alto_approx;
+    }
+  }
+}
+
+.row:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
 /*============ Home ============*/
 .home {
-  margin-top: 4px;
   width: 100vw;
   height: 80vh;
   background: url(./../assets/images/hero-bg.png) no-repeat center;
@@ -221,6 +295,9 @@ ul {
   background: url(./../assets/images/drinks-bg.png) no-repeat center;
   background-size: cover;
   color: $dark;
+  @media screen and (max-width: 1000px) {
+    justify-content: center;
+  }
   & > .title {
     @extend %large-title;
     margin: 0;
@@ -318,6 +395,9 @@ ul {
   background: url(./../assets/images/cleanse-bg.png) no-repeat center;
   background-size: cover;
   color: $dark;
+  @media screen and (max-width: 1000px) {
+    justify-content: center;
+  }
   & > .title {
     @extend %large-title;
     margin: 0;
@@ -435,6 +515,7 @@ ul {
   & > form {
     @media screen and (max-width: 1000px) {
       flex-direction: column;
+      justify-content: center;
       text-align: center;
       margin-bottom: 50px;
     }
@@ -445,21 +526,33 @@ ul {
     }
     & > .field {
       margin-top: 15px;
+      display: flex;
+      @media screen and (max-width: 1000px) {
+        flex-direction: column;
+        justify-content: center;
+      }
       & > input {
+        min-width: 350px;
         padding: 10px;
         font-size: 18px;
-        margin-right: 15px;
-        width: 300px;
+        margin-right: 10px;
+        align-self: center;
+        @media screen and (max-width: 1000px) {
+          margin-bottom: 10px;
+        }
       }
       & > button {
         @extend %transparent-button;
         padding: 10px 35px;
+        display: inline;
+        align-self: center;
       }
     }
   }
 
   & > .footer-link-categories {
     display: flex;
+    justify-content: center;
     & > ul {
       list-style-type: none;
       margin: 0 50px;
