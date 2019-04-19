@@ -1,2 +1,41 @@
+/*============ Theme Colors ============*/
 $dark: #231f20;
 $orangered: #f95951;
+
+/*============ Reusable Properties ============*/
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%large-title {
+  font-size: 45px;
+  @media screen and (max-width: 601px) {
+    font-size: 30px;
+  }
+  @media screen and (max-width: 460px) {
+    font-size: 28px;
+  }
+}
+
+%medium-title {
+  font-size: 35px;
+  @media screen and (max-width: 601px) {
+    font-size: 20px;
+  }
+  @media screen and (max-width: 460px) {
+    font-size: 18px;
+  }
+}
+
+%normal-text {
+  font-size: 18px;
+  @media screen and (max-width: 601px) {
+    font-size: 15px;
+    width: 85%;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+}

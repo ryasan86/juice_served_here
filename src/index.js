@@ -1,10 +1,5 @@
 import './styles/index.scss';
 
-const theme = {
-  dark: '#231f20',
-  orangered: '#f95951',
-};
-
 const navLinks = document.querySelectorAll('.nav-link');
 
 const onLinkClick = e => {
