@@ -74,7 +74,7 @@ $color_alto_approx: #ddd;
       'logo left login'
       '. right box';
   }
-  & > .login {
+  .login {
     grid-area: login;
     display: flex;
     align-items: center;
@@ -135,11 +135,6 @@ $color_alto_approx: #ddd;
     left: 0;
     box-shadow: 0 8px 16px 0 $black_20;
     z-index: 1;
-    .header {
-      background: red;
-      padding: 16px;
-      color: white;
-    }
   }
   &:hover {
     .dropbtn {
@@ -161,7 +156,7 @@ $color_alto_approx: #ddd;
     width: 100%;
     height: auto;
   }
-  a {
+  & > a {
     float: none;
     color: black;
     padding: 16px;
@@ -190,7 +185,7 @@ $color_alto_approx: #ddd;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  & > .header-text {
+  .header-text {
     width: 80%;
     color: $dark;
     @media screen and (max-width: 676px) {
@@ -229,16 +224,16 @@ $color_alto_approx: #ddd;
   flex-direction: column;
   text-align: center;
   color: $dark;
-  & > .title {
+  .title {
     @extend %medium-title;
     margin: 0;
     padding: 0;
   }
-  & > .sub-paragraph {
+  .sub-paragraph {
     max-width: 550px;
     @extend %normal-text;
   }
-  & > .step-list {
+  .step-list {
     width: 60%;
     list-style-type: none;
     display: flex;
@@ -251,13 +246,13 @@ $color_alto_approx: #ddd;
     & > li {
       position: relative;
       width: 140px;
-      & > .big-number {
+      .big-number {
         font-size: 12em;
         color: $orangered;
         margin: 0;
         padding: 0;
       }
-      & > .step-description {
+      .step-description {
         position: absolute;
         top: 35%;
         left: -30%;
@@ -274,7 +269,7 @@ $color_alto_approx: #ddd;
           width: 160%;
         }
       }
-      & > .step-meta {
+      .step-meta {
         position: absolute;
         top: 45%;
         left: -30%;
@@ -298,7 +293,7 @@ $color_alto_approx: #ddd;
   @media screen and (max-width: 1000px) {
     justify-content: center;
   }
-  & > .title {
+  .title {
     @extend %large-title;
     margin: 0;
   }
@@ -311,11 +306,11 @@ $color_alto_approx: #ddd;
   }
   .drinks-group {
     margin: 0;
-    & > .sub-title {
+    .sub-title {
       @extend %medium-title;
       margin: 0;
     }
-    & > .sub-paragraph {
+    .sub-paragraph {
       @extend %normal-text;
       max-width: 450px;
     }
@@ -339,15 +334,15 @@ $color_alto_approx: #ddd;
     margin: 20px 0;
     background: $orangered;
   }
-  & > .title {
+  .title {
     @extend %medium-title;
     margin: 0;
   }
-  & > .sub-paragraph {
+  .sub-paragraph {
     @extend %normal-text;
     max-width: 450px;
   }
-  & .drink-list {
+  .drink-list {
     display: flex;
     list-style-type: none;
     @media screen and (max-width: 1000px) {
@@ -358,12 +353,12 @@ $color_alto_approx: #ddd;
     & > li {
       margin: 15px;
       position: relative;
-      & > .overlay-container {
+      .overlay-container {
         width: 100%;
         & > img {
           width: 300px;
         }
-        & > .img-overlay {
+        .img-overlay {
           top: 0;
           left: 0;
           width: 100%;
@@ -398,16 +393,16 @@ $color_alto_approx: #ddd;
   @media screen and (max-width: 1000px) {
     justify-content: center;
   }
-  & > .title {
-    @extend %large-title;
-    margin: 0;
-  }
   & > hr {
     height: 2px;
     width: 30px;
     border: none;
     margin: 20px 0;
     background: $orangered;
+  }
+  .title {
+    @extend %large-title;
+    margin: 0;
   }
   .cleanse-group {
     margin: 0;
@@ -439,15 +434,11 @@ $color_alto_approx: #ddd;
     margin: 20px 0;
     background: $orangered;
   }
-  & > .title {
+  .title {
     @extend %large-title;
     margin: 0;
   }
-  & > .sub-paragraph {
-    @extend %normal-text;
-    max-width: 450px;
-  }
-  & .locations-list {
+  .locations-list {
     display: flex;
     list-style-type: none;
     @media screen and (max-width: 1000px) {
@@ -458,7 +449,7 @@ $color_alto_approx: #ddd;
     & > li {
       margin: 100px 15px;
 
-      & > .overlay-container {
+      .overlay-container {
         @extend %flex-center;
         overflow: hidden;
         position: relative;
@@ -468,7 +459,7 @@ $color_alto_approx: #ddd;
           // width: 300px;
           min-height: 100%;
         }
-        & > .img-overlay {
+        .img-overlay {
           top: 0;
           left: 0;
           width: 100%;
@@ -483,7 +474,7 @@ $color_alto_approx: #ddd;
           @extend %flex-center;
         }
       }
-      & > .card-body {
+      .card-body {
         margin-top: 10px;
         & > h3 {
           color: $orangered;
@@ -524,7 +515,7 @@ $color_alto_approx: #ddd;
       font-size: 1.8em;
       margin: 0;
     }
-    & > .field {
+    .field {
       margin-top: 15px;
       display: flex;
       @media screen and (max-width: 1000px) {
