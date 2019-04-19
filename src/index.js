@@ -1,9 +1,8 @@
 import './styles/index.scss';
 
-/*============ Nav ============*/
+/*============ Nav link hover ============*/
 const navLinks = document.querySelectorAll('.nav-link');
 
-// activate nav link on hover
 navLinks.forEach(link => {
   link.addEventListener('mouseenter', function() {
     if (this.firstChild.tagName === 'A') {
@@ -17,10 +16,9 @@ navLinks.forEach(link => {
   });
 });
 
-/*============ Images with overlays on hover ============*/
+/*============ Images with overlays hover ============*/
 const drinkItems = document.querySelectorAll('.overlay-container');
 
-// toggle overlays
 drinkItems.forEach(drinkItem => {
   let overlay;
 

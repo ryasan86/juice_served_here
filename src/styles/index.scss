@@ -73,6 +73,9 @@ ul {
     display: flex;
     align-items: center;
     cursor: pointer;
+    &:hover {
+      color: $orangered;
+    }
   }
   .horizontal-logo {
     grid-area: logo;
@@ -128,7 +131,7 @@ ul {
     width: 100%;
     left: 0;
     background: white;
-    box-shadow: 0 8px 16px 0 $black_20;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     z-index: 1;
   }
   &:hover {
@@ -497,7 +500,7 @@ ul {
   min-height: 40vh;
   display: flex;
   justify-content: space-around;
-  padding: 100px 200px;
+  padding: 100px 150px;
   border-top: 1px solid lightgray;
   @media screen and (max-width: 1000px) {
     flex-direction: column;
