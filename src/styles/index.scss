@@ -308,7 +308,8 @@ ul {
         font-weight: bolder;
         color: $orangered;
         border: 2px solid $orangered;
-        display: none;
+        visibility: hidden;
+        cursor: pointer;
         @extend %flex-center;
       }
     }

@@ -1,12 +1,11 @@
 import './styles/index.scss';
 
-const navLinks = document.querySelectorAll('.nav-link');
-const drinkItems = document.querySelector('.drink-list');
-
 /*============ Nav Links ============*/
+const navLinks = document.querySelectorAll('.nav-link');
+
 const onNavLinkClick = e => {
   // deactivate active nav link
-  navLinks.forEach((navLink, i) => {
+  navLinks.forEach(navLink => {
     navLink.classList.remove('active');
   });
   // active new active nav link
@@ -20,9 +19,15 @@ navList.forEach(list => {
 });
 
 /*============ Drink Items ============*/
-drinkItems.addEventListener('click', e => {
-  // if (e.target.tagName === 'LI') {
-  //   console.log('test');
-  // }
-  console.log(e.target.tagName)
+const drinkItems = document.querySelectorAll('.drink-item');
+
+drinkItems.forEach(drinkItem => {
+  drinkItem.addEventListener('mouseenter', function() {
+    const overlay = this.lastElementChild;
+    overlay.style.visibility = 'visible';
+  });
+  drinkItem.addEventListener('mouseleave', function() {
+    const overlay = this.lastElementChild;
+    overlay.style.visibility = 'hidden';
+  });
 });
