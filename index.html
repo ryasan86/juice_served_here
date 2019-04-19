@@ -5,10 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Juice Served Here</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
   </head>
 
   <body>
@@ -28,50 +24,59 @@
         <li>
           <div class="dropdown">
             <button class="dropbtn">
-              SHOP
-              <i class="fa fa-caret-down"></i>
+              SHOP <img src="./assets/images/down-arrow.svg" alt="down-arrow" />
             </button>
             <div class="dropdown-content">
               <div class="row">
                 <div class="column">
-                  <h3>DRINKS</h3>
-                  <a>Link 1</a>
-                  <a>Link 2</a>
-                  <a>Link 3</a>
+                  <p>DRINKS</p>
+                  <a>All</a>
+                  <a>Juices</a>
+                  <a>Smoothies</a>
+                  <a>Cleanse Packs</a>
+                  <a>Shots</a>
+                  <a>Coffee</a>
+                  <a>Water</a>
                 </div>
                 <div class="column">
-                  <h3>GOODS</h3>
-                  <a>Link 1</a>
-                  <a>Link 2</a>
-                  <a>Link 3</a>
+                  <p>GOODS</p>
+                  <a>All</a>
+                  <a>Teas</a>
+                  <a>Coffee</a>
+                  <a>Vitals</a>
+                  <a>Snacks</a>
                 </div>
                 <div class="column">
-                  <h3>BOXES</h3>
-                  <a>Link 1</a>
-                  <a>Link 2</a>
-                  <a>Link 3</a>
+                  <p>BOXES</p>
+                  <a>All</a>
+                  <a>Favorites Box</a>
+                  <a>Sweet Cream Box</a>
+                  <a>Detox Box</a>
+                  <a>Greens Box</a>
                 </div>
                 <div class="column">
-                  <h3>CLEANSES</h3>
-                  <a>Link 1</a>
-                  <a>Link 2</a>
-                  <a>Link 3</a>
+                  <p>CLEANSES</p>
+                  <a>All</a>
+                  <a>Soft Cleanse</a>
+                  <a>Semi Cleanse</a>
+                  <a>Hard Cleanse</a>
+                </div>
+                <div class="column">
+                  <img src="./assets/images/dd.png" alt="dd" />
                 </div>
               </div>
             </div>
           </div>
         </li>
-        <li><a>CLEANSES</a></li>
-        <li><a>BUILD A BOX</a></li>
+        <li class="nav-link"><a href="#cleanse">CLEANSES</a></li>
+        <li class="nav-link"><a href="#box">BUILD A BOX</a></li>
       </ul>
       <div class="horizontal-logo">
         <img src="./assets/images/horizontal-logo.png" alt="horizontal-logo" />
       </div>
       <ul class="nav-list right">
-        <li>
-          <a class="nav-link">THE UNCONVENTIONAL</a>
-        </li>
-        <li><a class="nav-link">WHO WE ARE</a></li>
+        <li class="nav-link"><a>THE UNCONVENTIONAL</a></li>
+        <li class="nav-link"><a>WHO WE ARE</a></li>
       </ul>
       <div class="box-hover">
         <img src="./assets/images/box-hover.png" alt="box-hover" />
@@ -93,7 +98,7 @@
     <!-- Home End -->
 
     <!-- Boxes Start -->
-    <section class="buy-box">
+    <section id="box" class="buy-box">
       <h1 class="title">YOU BUY IT BY THE BOX</h1>
       <p class="sub-paragraph">
         Choose 7-8 products of your liking and have it delivered to your door as
@@ -173,7 +178,7 @@
     <!-- Pick Your Pleasure End -->
 
     <!-- Cleanse Start -->
-    <section class="cleanse">
+    <section id="cleanse" class="cleanse">
       <h1 class="title">CLEANSE</h1>
       <hr />
       <div class="cleanse-group">
