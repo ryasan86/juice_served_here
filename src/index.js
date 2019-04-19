@@ -1,6 +1,7 @@
 import './styles/index.scss';
 
-/*============ Nav Links ============*/
+/*============ Nav ============*/
+const navLists = document.querySelectorAll('.nav-list');
 const navLinks = document.querySelectorAll('.nav-link');
 
 const onNavLinkClick = e => {
@@ -12,22 +13,42 @@ const onNavLinkClick = e => {
   e.target.classList.add('active');
 };
 
-const navList = document.querySelectorAll('.nav-list');
-
-navList.forEach(list => {
+navLists.forEach(list => {
   list.addEventListener('click', onNavLinkClick);
 });
 
-/*============ Drink Items ============*/
-const drinkItems = document.querySelectorAll('.drink-item');
+/*============ Drinks ============*/
+const drinkItems = document.querySelectorAll('.drink-list li');
 
 drinkItems.forEach(drinkItem => {
+  // show overlay
+  let overlay;
+
   drinkItem.addEventListener('mouseenter', function() {
-    const overlay = this.lastElementChild;
+    overlay = this.lastElementChild;
     overlay.style.visibility = 'visible';
   });
+  // hide overlay
   drinkItem.addEventListener('mouseleave', function() {
-    const overlay = this.lastElementChild;
+    overlay = this.lastElementChild;
+    overlay.style.visibility = 'hidden';
+  });
+});
+
+/*============ Locations ============*/
+const locationItems = document.querySelectorAll('.locations-list li');
+
+locationItems.forEach(locationItem => {
+  // show overlay
+  let overlay;
+
+  locationItem.addEventListener('mouseenter', function() {
+    overlay = this.firstElementChild.lastElementChild;
+    overlay.style.visibility = 'visible';
+  });
+
+  locationItem.addEventListener('mouseleave', function() {
+    overlay = this.firstElementChild.lastElementChild;
     overlay.style.visibility = 'hidden';
   });
 });
