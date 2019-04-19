@@ -1,34 +1,33 @@
 import './styles/index.scss';
 
 /*============ Nav ============*/
-const navLists = document.querySelectorAll('.nav-list');
 const navLinks = document.querySelectorAll('.nav-link');
 
-const onNavLinkClick = e => {
-  // deactivate active nav link
-  navLinks.forEach(navLink => {
-    navLink.classList.remove('active');
+// activate nav link on hover
+navLinks.forEach(link => {
+  link.addEventListener('mouseenter', function() {
+    if (this.firstChild.tagName === 'A') {
+      this.firstChild.classList.add('active');
+    }
   });
-  // active new active nav link
-  e.target.classList.add('active');
-};
-
-navLists.forEach(list => {
-  list.addEventListener('click', onNavLinkClick);
+  link.addEventListener('mouseleave', function() {
+    if (this.firstChild.tagName === 'A') {
+      this.firstChild.classList.remove('active');
+    }
+  });
 });
 
 /*============ Images with overlays on hover ============*/
 const drinkItems = document.querySelectorAll('.overlay-container');
 
+// toggle overlays
 drinkItems.forEach(drinkItem => {
-  // show overlay
   let overlay;
 
   drinkItem.addEventListener('mouseenter', function() {
     overlay = this.lastElementChild;
     overlay.style.visibility = 'visible';
   });
-  // hide overlay
   drinkItem.addEventListener('mouseleave', function() {
     overlay = this.lastElementChild;
     overlay.style.visibility = 'hidden';
