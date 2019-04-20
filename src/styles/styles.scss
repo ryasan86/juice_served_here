@@ -1,5 +1,18 @@
 @import './variables';
 
+/*============ Media Query Triggers ============*/
+@mixin medium {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media screen and (max-width: 750px) {
+    @content;
+  }
+}
+
 /*============ Global Styles ============*/
 html {
   box-sizing: border-box;
@@ -60,10 +73,26 @@ ul {
   display: none;
   text-align: center;
   padding: 1rem;
+  @include medium {
+    display: block;
+  }
+  @include small {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  & > img {
+    @include small {
+      width: 20rem;
+    }
+  }
   & > a {
     display: none;
     font-size: 2.5rem;
     width: 6rem;
+    @include small {
+      display: block;
+    }
     &:hover {
       background: rgba(0, 0, 0, 0.1);
     }
@@ -80,6 +109,10 @@ ul {
   @extend %flex-center;
   list-style-type: none;
   cursor: pointer;
+  @include small {
+    flex-direction: column;
+    max-height: 0;
+  }
   &.active {
     max-height: 100%;
   }
@@ -93,8 +126,15 @@ ul {
   }
   .has-horizontal-logo {
     padding: 0 6rem;
+    @include medium {
+      display: none;
+    }
   }
   .nav-item {
+    @include small {
+      position: static;
+      text-transform: uppercase;
+    }
     & > a {
       @extend %flex-center;
       display: block;
@@ -141,63 +181,35 @@ ul {
   justify-content: space-between;
   flex-wrap: wrap;
   padding-left: 10rem;
-  .column {
-    color: $dark;
-    min-width: 15rem;
-    & > p {
-      font-weight: bold;
-    }
-    & > a {
-      padding: 0.5rem 0;
-      text-decoration: none;
-      display: block;
-      &:hover {
-        color: $orangered;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .row {
+  @include medium {
     justify-content: space-between;
     padding-right: 10rem;
-    .column {
-      &.has-image {
-        display: none;
-      }
-      p,
-      a {
-        margin-left: 25%;
-      }
-    }
-  }
-  .mobile-nav {
-    display: block;
-  }
-  .has-horizontal-logo {
-    display: none;
   }
 }
 
-@media screen and (max-width: 750px) {
-  .mobile-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    & > img {
-      width: 20rem;
-    }
-    & > a {
-      display: block;
+.column {
+  color: $dark;
+  min-width: 15rem;
+  &.has-image {
+    @include medium {
+      display: none;
     }
   }
-  .nav-list {
-    flex-direction: column;
-    max-height: 0;
-    .nav-item {
-      position: static;
-      text-transform: uppercase;
+  & > p {
+    font-weight: bold;
+    @include medium {
+      margin-left: 25%;
+    }
+  }
+  & > a {
+    padding: 0.5rem 0;
+    text-decoration: none;
+    display: block;
+    @include medium {
+      margin-left: 25%;
+    }
+    &:hover {
+      color: $orangered;
     }
   }
 }
