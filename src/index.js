@@ -4,14 +4,15 @@ import './styles/index.scss';
 const navItems = document.querySelectorAll('.nav-item');
 
 navItems.forEach(navItem => {
+  const activeLink = 'active';
   navItem.addEventListener('mouseenter', function() {
     if (this.firstChild.tagName === 'A') {
-      this.firstChild.classList.add('active');
+      this.firstChild.classList.add(activeLink);
     }
   });
   navItem.addEventListener('mouseleave', function() {
     if (this.firstChild.tagName === 'A') {
-      this.firstChild.classList.remove('active');
+      this.firstChild.classList.remove(activeLink);
     }
   });
 });
@@ -34,7 +35,14 @@ overlayContainers.forEach(overlayContainer => {
 
 /*============ Toggle nav menu ============*/
 const toggleMenu = document.querySelector('.toggle-menu');
+const navList = document.querySelector('.nav-list');
 
 toggleMenu.addEventListener('click', function() {
-  console.log(this);
-})
+  const { classList } = navList;
+  const openNav = 'active';
+  if (classList.contains(openNav)) {
+    classList.remove(openNav);
+  } else {
+    classList.add(openNav);
+  }
+});
