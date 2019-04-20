@@ -1,6 +1,6 @@
 import './styles/styles.scss';
 
-const toggleMenu = document.querySelector('.toggle-menu');
+const toggleMenu = document.querySelector('.mobile-nav a');
 const navList = document.querySelector('.nav-list');
 const overlayContainers = document.querySelectorAll('.overlay-container');
 const navItems = document.querySelectorAll('.nav-item');

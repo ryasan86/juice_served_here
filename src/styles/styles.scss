@@ -125,7 +125,7 @@ ul {
     width: 100%;
     left: 0;
     background: white;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.8rem 1.6rem 0 rgba(0, 0, 0, 0.2);
     z-index: 1;
   }
   &:hover {
@@ -149,7 +149,7 @@ ul {
       font-weight: bold;
     }
     & > a {
-      padding: 5px 0;
+      padding: 0.5rem 0;
       text-decoration: none;
       display: block;
       &:hover {
@@ -214,24 +214,24 @@ ul {
       text-align: center;
     }
     & > h1 {
-      margin-bottom: 10px;
+      margin-bottom: 1rem;
       @extend %large-title;
     }
     & > p {
-      margin-bottom: 20px;
-      font-size: 18px;
+      margin-bottom: 2rem;
+      font-size: 1.8rem;
       @media screen and (max-width: 601px) {
         width: 85%;
         display: block;
         margin: auto;
-        margin-bottom: 20px;
+        margin-bottom: 2rem;
       }
     }
     & > button {
       @extend %orangered-button;
       @media screen and (max-width: 601px) {
-        font-size: 16px;
-        width: 140px;
+        font-size: 1.6rem;
+        width: 14rem;
       }
     }
   }
@@ -260,7 +260,6 @@ ul {
 }
 
 .step-list {
-  // width: 60%;
   list-style-type: none;
   display: flex;
   justify-content: center;

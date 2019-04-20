@@ -10,32 +10,32 @@ $orangered: #f95951;
 }
 
 %large-title {
-  font-size: 45px;
+  font-size: 4.5rem;
   @media screen and (max-width: 601px) {
-    font-size: 30px;
+    font-size: 3rem;
   }
   @media screen and (max-width: 460px) {
-    font-size: 28px;
+    font-size: 2.8rem;
   }
 }
 
 %medium-title {
-  font-size: 30px;
+  font-size: 3rem;
   @media screen and (max-width: 601px) {
-    font-size: 20px;
+    font-size: 2rem;
   }
   @media screen and (max-width: 460px) {
-    font-size: 18px;
+    font-size: 1.8rem;
   }
 }
 
 %normal-text {
-  font-size: 18px;
+  font-size: 1.8rem;
   @media screen and (max-width: 601px) {
-    font-size: 15px;
+    font-size: 1.5rem;
   }
   @media screen and (max-width: 460px) {
-    font-size: 13px;
+    font-size: 1.3rem;
   }
 }
 
