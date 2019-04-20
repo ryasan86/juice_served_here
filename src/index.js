@@ -1,4 +1,4 @@
-import './styles/index.scss';
+import './styles/styles.scss';
 
 const toggleMenu = document.querySelector('.toggle-menu');
 const navList = document.querySelector('.nav-list');
