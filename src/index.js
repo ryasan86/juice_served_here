@@ -1,8 +1,11 @@
 import './styles/index.scss';
 
-/*============ Nav link hover ============*/
+const toggleMenu = document.querySelector('.toggle-menu');
+const navList = document.querySelector('.nav-list');
+const overlayContainers = document.querySelectorAll('.overlay-container');
 const navItems = document.querySelectorAll('.nav-item');
 
+/*============ Nav link hover ============*/
 navItems.forEach(navItem => {
   const activeLink = 'active';
   navItem.addEventListener('mouseenter', function() {
@@ -18,8 +21,6 @@ navItems.forEach(navItem => {
 });
 
 /*============ Images with overlays hover ============*/
-const overlayContainers = document.querySelectorAll('.overlay-container');
-
 overlayContainers.forEach(overlayContainer => {
   let overlay;
 
@@ -34,9 +35,6 @@ overlayContainers.forEach(overlayContainer => {
 });
 
 /*============ Toggle nav menu ============*/
-const toggleMenu = document.querySelector('.toggle-menu');
-const navList = document.querySelector('.nav-list');
-
 toggleMenu.addEventListener('click', function() {
   const { classList } = navList;
   const openNav = 'active';
