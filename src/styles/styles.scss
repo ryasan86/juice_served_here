@@ -28,14 +28,14 @@ a {
 
 button {
   cursor: pointer;
-  padding: 10px 25px;
-  font-size: 18px;
+  padding: 1rem 2.5rem;
+  font-size: 1.8rem;
   transition: background-color 0.2s ease-in-out;
 }
 
 section {
   min-height: 70vh;
-  padding: 40px 0;
+  padding: 4rem 0;
 }
 
 ul {
@@ -47,7 +47,7 @@ ul {
 .pencil-ad {
   background: $dark;
   color: white;
-  padding: 10px 0;
+  padding: 1rem 0;
   text-align: center;
   b {
     text-decoration: underline;
@@ -58,13 +58,13 @@ ul {
 .mobile-nav {
   display: none;
   text-align: center;
-  padding: 2em;
+  padding: 2rem;
   .toggle-menu {
     display: none;
-    font-size: 2.5em;
+    font-size: 2.5rem;
     position: absolute;
     right: 0;
-    width: 60px;
+    width: 6rem;
     &:hover {
       background: rgba(0, 0, 0, 0.1);
     }
@@ -76,26 +76,37 @@ ul {
   overflow: hidden;
   display: flex;
   justify-content: space-around;
-  .nav-list {
-    @extend %flex-center;
-    list-style-type: none;
-    &.active {
-      max-height: 100%;
-    }
-    & > li {
-      cursor: pointer;
-      &.nav-item {
-        & > a {
-          @extend %flex-center;
-          display: block;
-          white-space: nowrap;
-          padding: 2em;
-          &.active {
-            color: $orangered;
-          }
-        }
+}
+
+.nav-list {
+  @extend %flex-center;
+  list-style-type: none;
+  cursor: pointer;
+  // position: relative;
+  &.active {
+    max-height: 100%;
+  }
+  .nav-item {
+    & > a {
+      @extend %flex-center;
+      display: block;
+      white-space: nowrap;
+      padding: 1.5rem;
+      &.active {
+        color: $orangered;
       }
     }
+  }
+  .login {
+    position: absolute;
+    left: 2rem;
+  }
+  .box-hover {
+    position: absolute;
+    right: 2rem;
+  }
+  .horizontal-logo {
+    padding: 0 6rem;
   }
 }
 
@@ -131,7 +142,7 @@ ul {
 .row {
   display: flex;
   justify-content: space-between;
-  margin-left: 10%;
+  margin-left: 10rem;
   .column {
     position: relative;
     color: $dark;
@@ -149,7 +160,7 @@ ul {
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1200px) {
   .row {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -157,15 +168,15 @@ ul {
       display: none;
     }
   }
-  .horizontal-logo {
-    display: none;
-  }
   .mobile-nav {
     display: block;
   }
+  .horizontal-logo {
+    display: none;
+  }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 750px) {
   .mobile-nav {
     display: flex;
     justify-content: space-between;
@@ -177,6 +188,9 @@ ul {
   .nav-list {
     flex-direction: column;
     max-height: 0;
+    .nav-item {
+      position: static;
+    }
   }
 }
 
