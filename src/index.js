@@ -1,15 +1,15 @@
 import './styles/index.scss';
 
 /*============ Nav link hover ============*/
-const navLinks = document.querySelectorAll('.nav-link');
+const navItems = document.querySelectorAll('.nav-item');
 
-navLinks.forEach(link => {
-  link.addEventListener('mouseenter', function() {
+navItems.forEach(navItem => {
+  navItem.addEventListener('mouseenter', function() {
     if (this.firstChild.tagName === 'A') {
       this.firstChild.classList.add('active');
     }
   });
-  link.addEventListener('mouseleave', function() {
+  navItem.addEventListener('mouseleave', function() {
     if (this.firstChild.tagName === 'A') {
       this.firstChild.classList.remove('active');
     }
