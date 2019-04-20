@@ -65,7 +65,11 @@ ul {
   display: none;
   font-size: 2.5em;
   position: absolute;
-  right: 20px;
+  right: 0;
+  width: 60px;
+  &:hover {
+    background: rgba(0, 0, 0, 0.1);
+  }
 }
 
 .navbar {
@@ -102,9 +106,6 @@ ul {
     white-space: nowrap;
     padding: 2em;
     font: inherit;
-    & > img {
-      width: 12px;
-    }
   }
   .dropdown-content {
     display: none;

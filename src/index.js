@@ -31,3 +31,10 @@ overlayContainers.forEach(overlayContainer => {
     overlay.style.visibility = 'hidden';
   });
 });
+
+/*============ Toggle nav menu ============*/
+const toggleMenu = document.querySelector('.toggle-menu');
+
+toggleMenu.addEventListener('click', function() {
+  console.log(this);
+})
