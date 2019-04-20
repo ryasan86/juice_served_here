@@ -59,16 +59,15 @@ ul {
   display: none;
   text-align: center;
   padding: 2em;
-}
-
-.toggle-menu {
-  display: none;
-  font-size: 2.5em;
-  position: absolute;
-  right: 0;
-  width: 60px;
-  &:hover {
-    background: rgba(0, 0, 0, 0.1);
+  .toggle-menu {
+    display: none;
+    font-size: 2.5em;
+    position: absolute;
+    right: 0;
+    width: 60px;
+    &:hover {
+      background: rgba(0, 0, 0, 0.1);
+    }
   }
 }
 
@@ -80,6 +79,9 @@ ul {
   .nav-list {
     @extend %flex-center;
     list-style-type: none;
+    &.active {
+      max-height: 100%;
+    }
     & > li {
       cursor: pointer;
       &.nav-item {
@@ -174,14 +176,8 @@ ul {
   }
   .nav-list {
     flex-direction: column;
-    position: static;
     max-height: 0;
   }
-}
-
-.active {
-  max-height: 100%;
-  overflow: auto;
 }
 
 /*============ Home ============*/
