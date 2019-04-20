@@ -18,6 +18,7 @@ body {
   font-family: sans-serif;
   line-height: 2;
   font-size: 1.2em;
+  overflow-x: hidden;
 }
 
 a {
@@ -251,7 +252,7 @@ ul {
     padding: 0;
   }
   .sub-paragraph {
-    max-width: 550px;
+    max-width: 55rem;
     @extend %normal-text;
   }
   & > button {
@@ -266,10 +267,10 @@ ul {
   flex-wrap: wrap;
   & > li {
     position: relative;
-    width: 140px;
+    width: 14rem;
     margin: 0 10rem;
     .big-number {
-      font-size: 12em;
+      font-size: 18rem;
       color: $orangered;
       margin: 0;
       padding: 0;
@@ -278,9 +279,9 @@ ul {
       position: absolute;
       top: 35%;
       left: -30%;
-      font-size: 1.2em;
+      font-size: 1.4rem;
       font-weight: 600;
-      width: 100px;
+      width: 10rem;
       white-space: nowrap;
       color: $dark;
       &:after {
@@ -316,11 +317,7 @@ ul {
     margin: 0;
   }
   & > hr {
-    height: 2px;
-    width: 30px;
-    border: none;
-    margin: 20px 0;
-    background: $orangered;
+    @extend %orangered-hr;
   }
   .drinks-group {
     margin: 0;
@@ -330,7 +327,7 @@ ul {
     }
     .sub-paragraph {
       @extend %normal-text;
-      max-width: 450px;
+      max-width: 45rem;
     }
     & > button {
       margin-top: 15%;
@@ -346,11 +343,7 @@ ul {
   flex-direction: column;
   text-align: center;
   & > hr {
-    height: 2px;
-    width: 30px;
-    border: none;
-    margin: 20px 0;
-    background: $orangered;
+    @extend %orangered-hr;
   }
   .title {
     @extend %medium-title;
@@ -358,7 +351,7 @@ ul {
   }
   .sub-paragraph {
     @extend %normal-text;
-    max-width: 450px;
+    max-width: 45rem;
   }
   .drink-list {
     display: flex;
@@ -371,12 +364,12 @@ ul {
       align-items: center;
     }
     & > li {
-      margin: 5px 10px 5px 10px;
+      margin: 0.5rem 1rem 0.5rem 1rem;
       position: relative;
       .overlay-container {
         width: 100%;
         & > img {
-          width: 300px;
+          width: 30rem;
         }
         .img-overlay {
           top: 0;
@@ -396,7 +389,7 @@ ul {
     }
   }
   & > button {
-    margin-top: 30px;
+    margin-top: 3rem;
     @extend %transparent-button;
   }
 }
@@ -414,11 +407,7 @@ ul {
     justify-content: center;
   }
   & > hr {
-    height: 2px;
-    width: 30px;
-    border: none;
-    margin: 20px 0;
-    background: $orangered;
+    @extend %orangered-hr;
   }
   .title {
     @extend %large-title;
@@ -432,7 +421,7 @@ ul {
     }
     & > .sub-paragraph {
       @extend %normal-text;
-      max-width: 550px;
+      max-width: 55rem;
     }
     & > button {
       margin-top: 15%;
@@ -448,11 +437,7 @@ ul {
   align-items: center;
   flex-direction: column;
   & > hr {
-    height: 2px;
-    width: 30px;
-    border: none;
-    margin: 20px 0;
-    background: $orangered;
+    @extend %orangered-hr;
   }
   .title {
     @extend %large-title;
@@ -475,7 +460,7 @@ ul {
       overflow: hidden;
       position: relative;
       & > img {
-        height: 200px;
+        height: 20rem;
       }
       .img-overlay {
         top: 0;
@@ -493,14 +478,14 @@ ul {
       }
     }
     .card-body {
-      margin-top: 10px;
+      margin-top: 1rem;
       & > h3 {
         color: $orangered;
         margin: 0;
       }
       & > p {
         color: $dark;
-        margin: -5px 0;
+        margin: -0.5rem 0;
       }
     }
   }
@@ -511,7 +496,7 @@ ul {
   min-height: 40vh;
   display: flex;
   justify-content: space-around;
-  padding: 100px 150px;
+  padding: 10rem 15rem;
   border-top: 1px solid lightgray;
   @media screen and (max-width: 1000px) {
     flex-direction: column;
@@ -522,33 +507,33 @@ ul {
       flex-direction: column;
       justify-content: center;
       text-align: center;
-      margin-bottom: 50px;
+      margin-bottom: 5rem;
     }
     & > h4 {
       color: $dark;
-      font-size: 1.8em;
+      font-size: 2rem;
       margin: 0;
     }
     .field {
-      margin-top: 15px;
+      margin-top: 1.5rem;
       display: flex;
       @media screen and (max-width: 1000px) {
         flex-direction: column;
         justify-content: center;
       }
       & > input {
-        min-width: 350px;
-        padding: 10px;
-        font-size: 18px;
-        margin-right: 10px;
+        min-width: 35rem;
+        padding: 1rem;
+        font-size: 1.8rem;
+        margin-right: 1rem;
         align-self: center;
         @media screen and (max-width: 1000px) {
-          margin-bottom: 10px;
+          margin-bottom: 1rem;
         }
       }
       & > button {
         @extend %transparent-button;
-        padding: 10px 35px;
+        padding: 1rem 3.5rem;
         display: inline;
         align-self: center;
       }
@@ -560,7 +545,7 @@ ul {
     justify-content: center;
     & > ul {
       list-style-type: none;
-      margin: 0 50px;
+      margin: 0 5rem;
       color: $dark;
       & > h4 {
         font-weight: bolder;

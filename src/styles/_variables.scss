@@ -58,3 +58,11 @@ $orangered: #f95951;
     color: $orangered;
   }
 }
+
+%orangered-hr {
+  height: 0.2rem;
+  width: 3rem;
+  border: none;
+  margin: 2rem 0;
+  background: $orangered;
+}
