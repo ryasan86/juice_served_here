@@ -59,7 +59,7 @@ ul {
 .mobile-nav {
   display: none;
   text-align: center;
-  padding: 0.5rem 1rem;
+  padding: 1rem;
   & > a {
     display: none;
     font-size: 2.5rem;
@@ -139,10 +139,11 @@ ul {
 .row {
   display: flex;
   justify-content: space-between;
-  margin-left: 10rem;
+  flex-wrap: wrap;
+  padding-left: 10rem;
   .column {
-    position: relative;
     color: $dark;
+    min-width: 15rem;
     & > p {
       font-weight: bold;
     }
@@ -159,10 +160,16 @@ ul {
 
 @media screen and (max-width: 1200px) {
   .row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    img {
-      display: none;
+    justify-content: space-between;
+    padding-right: 10rem;
+    .column {
+      &.has-image {
+        display: none;
+      }
+      p,
+      a {
+        margin-left: 25%;
+      }
     }
   }
   .mobile-nav {
