@@ -59,7 +59,7 @@ ul {
   display: none;
   text-align: center;
   padding: 2rem;
-  .toggle-menu {
+  & > a {
     display: none;
     font-size: 2.5rem;
     position: absolute;
@@ -93,7 +93,7 @@ ul {
     position: absolute;
     right: 2rem;
   }
-  .horizontal-logo {
+  .has-horizontal-logo {
     padding: 0 6rem;
   }
   .nav-item {
@@ -170,7 +170,7 @@ ul {
   .mobile-nav {
     display: block;
   }
-  .horizontal-logo {
+  .has-horizontal-logo {
     display: none;
   }
 }
@@ -180,8 +180,11 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    .toggle-menu {
+    & > a {
       display: block;
+    }
+    & > img {
+      width: 20rem;
     }
   }
   .nav-list {
