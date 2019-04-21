@@ -63,8 +63,7 @@ ul {
   color: white;
   padding: 1rem 0;
   text-align: center;
-
-  & > b {
+  b {
     text-decoration: underline;
   }
 }
@@ -82,12 +81,12 @@ ul {
     justify-content: space-between;
     align-items: center;
   }
-  & > img {
+  img {
     @include small {
       width: 20rem;
     }
   }
-  & > a {
+  a {
     display: none;
     font-size: 2.5rem;
     width: 6rem;
