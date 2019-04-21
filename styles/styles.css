@@ -99,7 +99,7 @@ ul {
   color: white;
   padding: 1rem 0;
   text-align: center; }
-  .pencil-ad > b {
+  .pencil-ad b {
     text-decoration: underline; }
 
 /*============ Navigation ============*/
@@ -116,16 +116,16 @@ ul {
       justify-content: space-between;
       align-items: center; } }
   @media screen and (max-width: 750px) {
-    .mobile-nav > img {
+    .mobile-nav img {
       width: 20rem; } }
-  .mobile-nav > a {
+  .mobile-nav a {
     display: none;
     font-size: 2.5rem;
     width: 6rem; }
     @media screen and (max-width: 750px) {
-      .mobile-nav > a {
+      .mobile-nav a {
         display: block; } }
-    .mobile-nav > a:hover {
+    .mobile-nav a:hover {
       background: rgba(0, 0, 0, 0.1); }
 
 .navbar {
