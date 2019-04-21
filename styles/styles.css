@@ -1,61 +1,7 @@
 /*============ Theme Colors ============*/
-/*============ Extends ============*/
-.drink-list > li .overlay-container .img-overlay, .locations-list > li .overlay-container, .locations-list > li .overlay-container .img-overlay {
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-
-.hero-text > h1, .drinks .title, .cleanse .title, .locations .title {
-  font-size: 4.5rem; }
-  @media screen and (max-width: 601px) {
-    .hero-text > h1, .drinks .title, .cleanse .title, .locations .title {
-      font-size: 3rem; } }
-  @media screen and (max-width: 460px) {
-    .hero-text > h1, .drinks .title, .cleanse .title, .locations .title {
-      font-size: 2.8rem; } }
-
-.buy-box .title, .drinks-group .sub-title, .pick-your-pleasure .title, .cleanse-group > .sub-title {
-  font-size: 3rem; }
-  @media screen and (max-width: 601px) {
-    .buy-box .title, .drinks-group .sub-title, .pick-your-pleasure .title, .cleanse-group > .sub-title {
-      font-size: 2rem; } }
-  @media screen and (max-width: 460px) {
-    .buy-box .title, .drinks-group .sub-title, .pick-your-pleasure .title, .cleanse-group > .sub-title {
-      font-size: 1.8rem; } }
-
-.buy-box .sub-paragraph, .drinks-group .sub-paragraph, .pick-your-pleasure .sub-paragraph, .cleanse-group > .sub-paragraph {
-  font-size: 1.8rem; }
-  @media screen and (max-width: 601px) {
-    .buy-box .sub-paragraph, .drinks-group .sub-paragraph, .pick-your-pleasure .sub-paragraph, .cleanse-group > .sub-paragraph {
-      font-size: 1.5rem; } }
-  @media screen and (max-width: 460px) {
-    .buy-box .sub-paragraph, .drinks-group .sub-paragraph, .pick-your-pleasure .sub-paragraph, .cleanse-group > .sub-paragraph {
-      font-size: 1.3rem; } }
-
-.drinks-group > button, .pick-your-pleasure > button, .cleanse-group > button, .locations > button, .subscribe .field button {
-  border: 2px solid #f95951;
-  color: #f95951;
-  background-color: transparent; }
-  .drinks-group > button:hover, .pick-your-pleasure > button:hover, .cleanse-group > button:hover, .locations > button:hover, .subscribe .field button:hover {
-    background-color: #f95951;
-    color: white; }
-
-.hero-text > button, .buy-box > button {
-  border: 2px solid #f95951;
-  color: white;
-  background-color: #f95951; }
-  .hero-text > button:hover, .buy-box > button:hover {
-    background-color: white;
-    color: #f95951; }
-
-.drinks > hr, .pick-your-pleasure > hr, .cleanse > hr, .locations > hr {
-  height: 0.2rem;
-  width: 3rem;
-  border: none;
-  margin: 2rem 0;
-  background: #f95951; }
-
+/*============ Theme Colors ============*/
 /*============ Media Query Triggers ============*/
+/*============ Common ============*/
 /*============ Global Styles ============*/
 html {
   box-sizing: border-box;
@@ -250,7 +196,14 @@ ul {
       width: 95%;
       text-align: center; } }
   .hero-text > h1 {
+    font-size: 4.5rem;
     margin-bottom: 1rem; }
+    @media screen and (max-width: 601px) {
+      .hero-text > h1 {
+        font-size: 3rem; } }
+    @media screen and (max-width: 460px) {
+      .hero-text > h1 {
+        font-size: 2.8rem; } }
   .hero-text > p {
     margin-bottom: 2rem;
     font-size: 1.8rem; }
@@ -260,10 +213,17 @@ ul {
         display: block;
         margin: auto;
         margin-bottom: 2rem; } }
-  @media screen and (max-width: 601px) {
-    .hero-text > button {
-      font-size: 1.6rem;
-      width: 14rem; } }
+  .hero-text > button {
+    border: 2px solid #f95951;
+    color: white;
+    background-color: #f95951; }
+    .hero-text > button:hover {
+      background-color: white;
+      color: #f95951; }
+    @media screen and (max-width: 601px) {
+      .hero-text > button {
+        font-size: 1.6rem;
+        width: 14rem; } }
 
 /*============ Buy It By The Box ============*/
 .buy-box {
@@ -274,10 +234,31 @@ ul {
   text-align: center;
   color: #231f20; }
   .buy-box .title {
+    font-size: 3rem;
     margin: 0;
     padding: 0; }
+    @media screen and (max-width: 601px) {
+      .buy-box .title {
+        font-size: 2rem; } }
+    @media screen and (max-width: 460px) {
+      .buy-box .title {
+        font-size: 1.8rem; } }
   .buy-box .sub-paragraph {
+    font-size: 1.8rem;
     max-width: 55rem; }
+    @media screen and (max-width: 601px) {
+      .buy-box .sub-paragraph {
+        font-size: 1.5rem; } }
+    @media screen and (max-width: 460px) {
+      .buy-box .sub-paragraph {
+        font-size: 1.3rem; } }
+  .buy-box > button {
+    border: 2px solid #f95951;
+    color: white;
+    background-color: #f95951; }
+    .buy-box > button:hover {
+      background-color: white;
+      color: #f95951; }
 
 .step-list {
   list-style-type: none;
@@ -325,16 +306,49 @@ ul {
     .drinks {
       justify-content: center; } }
   .drinks .title {
+    font-size: 4.5rem;
     margin: 0; }
+    @media screen and (max-width: 601px) {
+      .drinks .title {
+        font-size: 3rem; } }
+    @media screen and (max-width: 460px) {
+      .drinks .title {
+        font-size: 2.8rem; } }
+  .drinks > hr {
+    height: 0.2rem;
+    width: 3rem;
+    border: none;
+    margin: 2rem 0;
+    background: #f95951; }
 
 .drinks-group {
   margin: 0; }
   .drinks-group .sub-title {
+    font-size: 3rem;
     margin: 0; }
+    @media screen and (max-width: 601px) {
+      .drinks-group .sub-title {
+        font-size: 2rem; } }
+    @media screen and (max-width: 460px) {
+      .drinks-group .sub-title {
+        font-size: 1.8rem; } }
   .drinks-group .sub-paragraph {
+    font-size: 1.8rem;
     max-width: 45rem; }
+    @media screen and (max-width: 601px) {
+      .drinks-group .sub-paragraph {
+        font-size: 1.5rem; } }
+    @media screen and (max-width: 460px) {
+      .drinks-group .sub-paragraph {
+        font-size: 1.3rem; } }
   .drinks-group > button {
-    margin-top: 15%; }
+    margin-top: 15%;
+    border: 2px solid #f95951;
+    color: #f95951;
+    background-color: transparent; }
+    .drinks-group > button:hover {
+      background-color: #f95951;
+      color: white; }
 
 /*============ Pick Your Pleasure ============*/
 .pick-your-pleasure {
@@ -342,12 +356,38 @@ ul {
   align-items: center;
   flex-direction: column;
   text-align: center; }
+  .pick-your-pleasure > hr {
+    height: 0.2rem;
+    width: 3rem;
+    border: none;
+    margin: 2rem 0;
+    background: #f95951; }
   .pick-your-pleasure .title {
+    font-size: 3rem;
     margin: 0; }
+    @media screen and (max-width: 601px) {
+      .pick-your-pleasure .title {
+        font-size: 2rem; } }
+    @media screen and (max-width: 460px) {
+      .pick-your-pleasure .title {
+        font-size: 1.8rem; } }
   .pick-your-pleasure .sub-paragraph {
+    font-size: 1.8rem;
     max-width: 45rem; }
+    @media screen and (max-width: 601px) {
+      .pick-your-pleasure .sub-paragraph {
+        font-size: 1.5rem; } }
+    @media screen and (max-width: 460px) {
+      .pick-your-pleasure .sub-paragraph {
+        font-size: 1.3rem; } }
   .pick-your-pleasure > button {
-    margin-top: 3rem; }
+    margin-top: 3rem;
+    border: 2px solid #f95951;
+    color: #f95951;
+    background-color: transparent; }
+    .pick-your-pleasure > button:hover {
+      background-color: #f95951;
+      color: white; }
 
 .drink-list {
   display: flex;
@@ -377,7 +417,10 @@ ul {
         color: #f95951;
         border: 2px solid #f95951;
         visibility: hidden;
-        cursor: pointer; }
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
 
 /*============ Cleanse ============*/
 .cleanse {
@@ -391,17 +434,50 @@ ul {
   @media screen and (max-width: 1000px) {
     .cleanse {
       justify-content: center; } }
+  .cleanse > hr {
+    height: 0.2rem;
+    width: 3rem;
+    border: none;
+    margin: 2rem 0;
+    background: #f95951; }
   .cleanse .title {
+    font-size: 4.5rem;
     margin: 0; }
+    @media screen and (max-width: 601px) {
+      .cleanse .title {
+        font-size: 3rem; } }
+    @media screen and (max-width: 460px) {
+      .cleanse .title {
+        font-size: 2.8rem; } }
 
 .cleanse-group {
   margin: 0; }
   .cleanse-group > .sub-title {
+    font-size: 3rem;
     margin: 0; }
+    @media screen and (max-width: 601px) {
+      .cleanse-group > .sub-title {
+        font-size: 2rem; } }
+    @media screen and (max-width: 460px) {
+      .cleanse-group > .sub-title {
+        font-size: 1.8rem; } }
   .cleanse-group > .sub-paragraph {
+    font-size: 1.8rem;
     max-width: 55rem; }
+    @media screen and (max-width: 601px) {
+      .cleanse-group > .sub-paragraph {
+        font-size: 1.5rem; } }
+    @media screen and (max-width: 460px) {
+      .cleanse-group > .sub-paragraph {
+        font-size: 1.3rem; } }
   .cleanse-group > button {
-    margin-top: 15%; }
+    margin-top: 15%;
+    border: 2px solid #f95951;
+    color: #f95951;
+    background-color: transparent; }
+    .cleanse-group > button:hover {
+      background-color: #f95951;
+      color: white; }
 
 /*============ Locations ============*/
 .locations {
@@ -409,8 +485,28 @@ ul {
   justify-content: space-between;
   align-items: center;
   flex-direction: column; }
+  .locations > hr {
+    height: 0.2rem;
+    width: 3rem;
+    border: none;
+    margin: 2rem 0;
+    background: #f95951; }
   .locations .title {
+    font-size: 4.5rem;
     margin: 0; }
+    @media screen and (max-width: 601px) {
+      .locations .title {
+        font-size: 3rem; } }
+    @media screen and (max-width: 460px) {
+      .locations .title {
+        font-size: 2.8rem; } }
+  .locations > button {
+    border: 2px solid #f95951;
+    color: #f95951;
+    background-color: transparent; }
+    .locations > button:hover {
+      background-color: #f95951;
+      color: white; }
 
 .locations-list {
   display: flex;
@@ -420,6 +516,9 @@ ul {
   .locations-list > li {
     margin: 1.5rem; }
     .locations-list > li .overlay-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       overflow: hidden;
       position: relative; }
       .locations-list > li .overlay-container > img {
@@ -435,7 +534,10 @@ ul {
         color: #f95951;
         border: 2px solid #f95951;
         visibility: hidden;
-        cursor: pointer; }
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
     .locations-list > li .card-body {
       margin-top: 1rem; }
       .locations-list > li .card-body > h3 {
@@ -477,9 +579,15 @@ ul {
         .subscribe .field input {
           width: 80%; } }
     .subscribe .field button {
+      border: 2px solid #f95951;
+      color: #f95951;
+      background-color: transparent;
       padding: 1rem 3.5rem;
       display: inline;
       align-self: center; }
+      .subscribe .field button:hover {
+        background-color: #f95951;
+        color: white; }
 
 .footer-link-categories {
   display: flex;
