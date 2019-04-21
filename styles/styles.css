@@ -1,0 +1,494 @@
+/*============ Theme Colors ============*/
+/*============ Extends ============*/
+.pick-your-pleasure .drink-list > li .overlay-container .img-overlay, .locations-list > li .overlay-container, .locations-list > li .overlay-container .img-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.home .header-text > h1, .drinks .title, .cleanse .title, .locations .title {
+  font-size: 4.5rem; }
+  @media screen and (max-width: 601px) {
+    .home .header-text > h1, .drinks .title, .cleanse .title, .locations .title {
+      font-size: 3rem; } }
+  @media screen and (max-width: 460px) {
+    .home .header-text > h1, .drinks .title, .cleanse .title, .locations .title {
+      font-size: 2.8rem; } }
+
+.buy-box .title, .drinks .drinks-group .sub-title, .pick-your-pleasure .title, .cleanse .cleanse-group > .sub-title {
+  font-size: 3rem; }
+  @media screen and (max-width: 601px) {
+    .buy-box .title, .drinks .drinks-group .sub-title, .pick-your-pleasure .title, .cleanse .cleanse-group > .sub-title {
+      font-size: 2rem; } }
+  @media screen and (max-width: 460px) {
+    .buy-box .title, .drinks .drinks-group .sub-title, .pick-your-pleasure .title, .cleanse .cleanse-group > .sub-title {
+      font-size: 1.8rem; } }
+
+.buy-box .sub-paragraph, .drinks .drinks-group .sub-paragraph, .pick-your-pleasure .sub-paragraph, .cleanse .cleanse-group > .sub-paragraph {
+  font-size: 1.8rem; }
+  @media screen and (max-width: 601px) {
+    .buy-box .sub-paragraph, .drinks .drinks-group .sub-paragraph, .pick-your-pleasure .sub-paragraph, .cleanse .cleanse-group > .sub-paragraph {
+      font-size: 1.5rem; } }
+  @media screen and (max-width: 460px) {
+    .buy-box .sub-paragraph, .drinks .drinks-group .sub-paragraph, .pick-your-pleasure .sub-paragraph, .cleanse .cleanse-group > .sub-paragraph {
+      font-size: 1.3rem; } }
+
+.drinks .drinks-group > button, .pick-your-pleasure > button, .cleanse .cleanse-group > button, .locations > button, .footer > form .field > button {
+  border: 2px solid #f95951;
+  color: #f95951;
+  background-color: transparent; }
+  .drinks .drinks-group > button:hover, .pick-your-pleasure > button:hover, .cleanse .cleanse-group > button:hover, .locations > button:hover, .footer > form .field > button:hover {
+    background-color: #f95951;
+    color: white; }
+
+.home .header-text > button, .buy-box > button {
+  border: 2px solid #f95951;
+  color: white;
+  background-color: #f95951; }
+  .home .header-text > button:hover, .buy-box > button:hover {
+    background-color: white;
+    color: #f95951; }
+
+.drinks > hr, .pick-your-pleasure > hr, .cleanse > hr, .locations > hr {
+  height: 0.2rem;
+  width: 3rem;
+  border: none;
+  margin: 2rem 0;
+  background: #f95951; }
+
+/*============ Media Query Triggers ============*/
+/*============ Global Styles ============*/
+html {
+  box-sizing: border-box;
+  font-size: 10px; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  line-height: 2;
+  font-size: 1.2em;
+  overflow-x: hidden; }
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer; }
+
+button {
+  cursor: pointer;
+  padding: 1rem 2.5rem;
+  font-size: 1.8rem;
+  transition: background-color 0.2s ease-in-out; }
+
+section {
+  min-height: 70vh;
+  padding: 4rem 0; }
+
+ul {
+  padding: 0;
+  margin: 0; }
+
+/*============ Pencil Ad ============*/
+.pencil-ad {
+  background: #231f20;
+  color: white;
+  padding: 1rem 0;
+  text-align: center; }
+  .pencil-ad > b {
+    text-decoration: underline; }
+
+/*============ Navigation ============*/
+.mobile-nav {
+  display: none;
+  text-align: center;
+  padding: 1rem; }
+  @media screen and (max-width: 1200px) {
+    .mobile-nav {
+      display: block; } }
+  @media screen and (max-width: 750px) {
+    .mobile-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; } }
+  @media screen and (max-width: 750px) {
+    .mobile-nav > img {
+      width: 20rem; } }
+  .mobile-nav > a {
+    display: none;
+    font-size: 2.5rem;
+    width: 6rem; }
+    @media screen and (max-width: 750px) {
+      .mobile-nav > a {
+        display: block; } }
+    .mobile-nav > a:hover {
+      background: rgba(0, 0, 0, 0.1); }
+
+.navbar {
+  display: flex;
+  overflow: hidden;
+  justify-content: space-around; }
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  cursor: pointer; }
+  @media screen and (max-width: 750px) {
+    .nav-list {
+      flex-direction: column;
+      max-height: 0; } }
+  .nav-list.active {
+    max-height: 100%; }
+  .nav-list .has-horizontal-logo {
+    padding: 0 6rem; }
+    @media screen and (max-width: 1200px) {
+      .nav-list .has-horizontal-logo {
+        display: none; } }
+
+.nav-item.login {
+  position: absolute;
+  left: 2rem; }
+  @media screen and (max-width: 750px) {
+    .nav-item.login {
+      position: static;
+      text-transform: uppercase; } }
+.nav-item.box-hover {
+  position: absolute;
+  right: 2rem; }
+  @media screen and (max-width: 750px) {
+    .nav-item.box-hover {
+      position: static; } }
+.nav-item > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  padding: 1.5rem; }
+  .nav-item > a.active {
+    color: #f95951; }
+
+.dropdown .dropbtn {
+  border: none;
+  outline: none;
+  background-color: inherit;
+  margin: 0;
+  white-space: nowrap;
+  padding: 2.5rem;
+  font: inherit; }
+.dropdown .dropdown-content {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  background: white;
+  box-shadow: 0 0.8rem 1.6rem 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  visibility: hidden;
+  transform: translateY(-5rem);
+  opacity: 0;
+  transition: all 0.2s ease-in-out; }
+.dropdown:hover .dropbtn {
+  color: #f95951; }
+.dropdown:hover .dropdown-content {
+  transform: translateY(0%);
+  visibility: visible;
+  opacity: 1; }
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 10rem; }
+  @media screen and (max-width: 1200px) {
+    .row {
+      justify-content: space-between;
+      padding-right: 10rem; } }
+
+.column {
+  color: #231f20;
+  min-width: 15rem; }
+  @media screen and (max-width: 1200px) {
+    .column.has-image {
+      display: none; } }
+  .column > p {
+    font-weight: bold; }
+    @media screen and (max-width: 1200px) {
+      .column > p {
+        margin-left: 25%; } }
+  .column > a {
+    padding: 0.5rem 0;
+    text-decoration: none;
+    display: block; }
+    @media screen and (max-width: 1200px) {
+      .column > a {
+        margin-left: 25%; } }
+    .column > a:hover {
+      color: #f95951; }
+
+/*============ Home ============*/
+.home {
+  height: 80vh;
+  background: url(./../assets/images/hero-bg.png) no-repeat center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .home .header-text {
+    width: 80%;
+    color: #231f20; }
+    @media screen and (max-width: 676px) {
+      .home .header-text {
+        width: 95%;
+        text-align: center; } }
+    .home .header-text > h1 {
+      margin-bottom: 1rem; }
+    .home .header-text > p {
+      margin-bottom: 2rem;
+      font-size: 1.8rem; }
+      @media screen and (max-width: 601px) {
+        .home .header-text > p {
+          width: 85%;
+          display: block;
+          margin: auto;
+          margin-bottom: 2rem; } }
+    @media screen and (max-width: 601px) {
+      .home .header-text > button {
+        font-size: 1.6rem;
+        width: 14rem; } }
+
+/*============ Buy It By The Box ============*/
+.buy-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: #231f20; }
+  .buy-box .title {
+    margin: 0;
+    padding: 0; }
+  .buy-box .sub-paragraph {
+    max-width: 55rem; }
+
+.step-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+  .step-list > li {
+    position: relative;
+    width: 14rem;
+    margin: 0 10rem; }
+    .step-list > li .big-number {
+      font-size: 18rem;
+      color: #f95951;
+      margin: 0;
+      padding: 0; }
+    .step-list > li .step-description {
+      position: absolute;
+      top: 35%;
+      left: -30%;
+      font-size: 1.4rem;
+      font-weight: 600;
+      width: 10rem;
+      white-space: nowrap;
+      color: #231f20; }
+      .step-list > li .step-description:after {
+        content: '';
+        background: #231f20;
+        height: 1px;
+        display: block;
+        width: 160%; }
+    .step-list > li .step-meta {
+      position: absolute;
+      top: 45%;
+      left: -30%; }
+
+/*============ Drinks ============*/
+.drinks {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background: url(./../assets/images/drinks-bg.png) no-repeat center;
+  background-size: cover;
+  color: #231f20; }
+  @media screen and (max-width: 1000px) {
+    .drinks {
+      justify-content: center; } }
+  .drinks .title {
+    margin: 0; }
+  .drinks .drinks-group {
+    margin: 0; }
+    .drinks .drinks-group .sub-title {
+      margin: 0; }
+    .drinks .drinks-group .sub-paragraph {
+      max-width: 45rem; }
+    .drinks .drinks-group > button {
+      margin-top: 15%; }
+
+/*============ Pick Your Pleasure ============*/
+.pick-your-pleasure {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center; }
+  .pick-your-pleasure .title {
+    margin: 0; }
+  .pick-your-pleasure .sub-paragraph {
+    max-width: 45rem; }
+  .pick-your-pleasure .drink-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style-type: none; }
+    @media screen and (max-width: 1000px) {
+      .pick-your-pleasure .drink-list {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; } }
+    .pick-your-pleasure .drink-list > li {
+      margin: 0.5rem 1rem 0.5rem 1rem;
+      position: relative; }
+      .pick-your-pleasure .drink-list > li .overlay-container {
+        width: 100%; }
+        .pick-your-pleasure .drink-list > li .overlay-container > img {
+          width: 30rem; }
+        .pick-your-pleasure .drink-list > li .overlay-container .img-overlay {
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(255, 255, 255, 0.5);
+          position: absolute;
+          font-weight: bolder;
+          color: #f95951;
+          border: 2px solid #f95951;
+          visibility: hidden;
+          cursor: pointer; }
+  .pick-your-pleasure > button {
+    margin-top: 3rem; }
+
+/*============ Cleanse ============*/
+.cleanse {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background: url(./../assets/images/cleanse-bg.png) no-repeat center;
+  background-size: cover;
+  color: #231f20; }
+  @media screen and (max-width: 1000px) {
+    .cleanse {
+      justify-content: center; } }
+  .cleanse .title {
+    margin: 0; }
+  .cleanse .cleanse-group {
+    margin: 0; }
+    .cleanse .cleanse-group > .sub-title {
+      margin: 0; }
+    .cleanse .cleanse-group > .sub-paragraph {
+      max-width: 55rem; }
+    .cleanse .cleanse-group > button {
+      margin-top: 15%; }
+
+/*============ Locations ============*/
+.locations {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column; }
+  .locations .title {
+    margin: 0; }
+
+.locations-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none; }
+  .locations-list > li {
+    margin: 1.5rem; }
+    .locations-list > li .overlay-container {
+      overflow: hidden;
+      position: relative; }
+      .locations-list > li .overlay-container > img {
+        height: 20rem; }
+      .locations-list > li .overlay-container .img-overlay {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.5);
+        position: absolute;
+        font-weight: bolder;
+        color: #f95951;
+        border: 2px solid #f95951;
+        visibility: hidden;
+        cursor: pointer; }
+    .locations-list > li .card-body {
+      margin-top: 1rem; }
+      .locations-list > li .card-body > h3 {
+        color: #f95951;
+        margin: 0; }
+      .locations-list > li .card-body > p {
+        color: #231f20;
+        margin: -0.5rem 0; }
+
+/*============ Footer ============*/
+.footer {
+  min-height: 40vh;
+  display: flex;
+  justify-content: space-around;
+  padding: 10rem 15rem;
+  border-top: 1px solid lightgray; }
+  @media screen and (max-width: 1000px) {
+    .footer {
+      flex-direction: column;
+      justify-content: center; } }
+  @media screen and (max-width: 1000px) {
+    .footer > form {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      margin-bottom: 5rem; } }
+  .footer > form > h4 {
+    color: #231f20;
+    font-size: 2rem;
+    margin: 0; }
+  .footer > form .field {
+    margin-top: 1.5rem;
+    display: flex; }
+    @media screen and (max-width: 1000px) {
+      .footer > form .field {
+        flex-direction: column;
+        justify-content: center; } }
+    .footer > form .field > input {
+      min-width: 35rem;
+      padding: 1rem;
+      font-size: 1.8rem;
+      margin-right: 1rem;
+      align-self: center; }
+      @media screen and (max-width: 1000px) {
+        .footer > form .field > input {
+          margin-bottom: 1rem; } }
+    .footer > form .field > button {
+      padding: 1rem 3.5rem;
+      display: inline;
+      align-self: center; }
+  .footer > .footer-link-categories {
+    display: flex;
+    justify-content: center; }
+    .footer > .footer-link-categories > ul {
+      list-style-type: none;
+      margin: 0 5rem;
+      color: #231f20; }
+      .footer > .footer-link-categories > ul > h4 {
+        font-weight: bolder; }
+
+/*# sourceMappingURL=styles.css.map */
