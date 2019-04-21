@@ -24,11 +24,11 @@ overlayContainers.forEach(overlayContainer => {
 
   overlayContainer.addEventListener('mouseenter', function() {
     overlay = this.lastElementChild;
-    overlay.style.visibility = 'visible';
+    overlay.style.opacity = 1;
   });
   overlayContainer.addEventListener('mouseleave', function() {
     overlay = this.lastElementChild;
-    overlay.style.visibility = 'hidden';
+    overlay.style.opacity = 0;
   });
 });
 

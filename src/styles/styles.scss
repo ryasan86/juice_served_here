@@ -9,6 +9,7 @@ html {
 
 * {
   overflow-x: hidden;
+  // outline: 1px solid red;
 }
 
 *,
@@ -281,6 +282,7 @@ ul {
   }
   button {
     @include orangered-button;
+    margin-top: 3rem;
   }
 }
 
@@ -292,7 +294,7 @@ ul {
   width: 100%;
   li {
     font-size: 1.4rem;
-    margin: 2rem 6rem;
+    margin: 0.1rem 6rem;
     position: relative;
     min-width: 27rem;
     h1 {
@@ -317,6 +319,12 @@ ul {
         display: block;
         width: 100%;
       }
+    }
+    span {
+      text-align: left;
+      position: absolute;
+      top: 47%;
+      left: 0;
     }
   }
 }
@@ -353,8 +361,8 @@ ul {
     max-width: 45rem;
   }
   button {
-    margin-top: 15%;
     @include transparent-button;
+    margin-top: 15%;
   }
 }
 
@@ -376,8 +384,8 @@ ul {
     @include orangered-hr;
   }
   button {
-    margin-top: 3rem;
     @include transparent-button;
+    margin-top: 3rem;
   }
 }
 
@@ -412,7 +420,8 @@ ul {
     font-weight: bolder;
     color: $orangered;
     border: 2px solid $orangered;
-    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
     cursor: pointer;
   }
 }

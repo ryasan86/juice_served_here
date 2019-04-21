@@ -258,7 +258,8 @@ ul {
   .buy-box button {
     border: 2px solid #f95951;
     color: white;
-    background-color: #f95951; }
+    background-color: #f95951;
+    margin-top: 3rem; }
     .buy-box button:hover {
       background-color: white;
       color: #f95951; }
@@ -271,7 +272,7 @@ ul {
   width: 100%; }
   .step-list li {
     font-size: 1.4rem;
-    margin: 2rem 6rem;
+    margin: 0.1rem 6rem;
     position: relative;
     min-width: 27rem; }
     .step-list li h1 {
@@ -294,6 +295,11 @@ ul {
         height: 1px;
         display: block;
         width: 100%; }
+    .step-list li span {
+      text-align: left;
+      position: absolute;
+      top: 47%;
+      left: 0; }
 
 /*============ Drinks ============*/
 .drinks {
@@ -344,10 +350,10 @@ ul {
       .drinks-group p {
         font-size: 1.3rem; } }
   .drinks-group button {
-    margin-top: 15%;
     border: 2px solid #f95951;
     color: #f95951;
-    background-color: transparent; }
+    background-color: transparent;
+    margin-top: 15%; }
     .drinks-group button:hover {
       background-color: #f95951;
       color: white; }
@@ -383,10 +389,10 @@ ul {
     margin: 2rem 0;
     background: #f95951; }
   .pick-your-pleasure button {
-    margin-top: 3rem;
     border: 2px solid #f95951;
     color: #f95951;
-    background-color: transparent; }
+    background-color: transparent;
+    margin-top: 3rem; }
     .pick-your-pleasure button:hover {
       background-color: #f95951;
       color: white; }
@@ -419,7 +425,8 @@ ul {
     font-weight: bolder;
     color: #f95951;
     border: 2px solid #f95951;
-    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
     cursor: pointer; }
 
 /*============ Cleanse ============*/
