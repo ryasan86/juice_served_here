@@ -118,34 +118,38 @@ ul {
   &.active {
     max-height: 100%;
   }
-  .login {
-    position: absolute;
-    left: 2rem;
-  }
-  .box-hover {
-    position: absolute;
-    right: 2rem;
-  }
   .has-horizontal-logo {
     padding: 0 6rem;
     @include medium {
       display: none;
     }
   }
-  .nav-item {
+}
+
+.nav-item {
+  &.login {
+    position: absolute;
+    left: 2rem;
     @include small {
       position: static;
       text-transform: uppercase;
     }
-    & > a {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      white-space: nowrap;
-      padding: 1.5rem;
-      &.active {
-        color: $orangered;
-      }
+  }
+  &.box-hover {
+    position: absolute;
+    right: 2rem;
+    @include small {
+      position: static;
+    }
+  }
+  & > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    padding: 1.5rem;
+    &.active {
+      color: $orangered;
     }
   }
 }
@@ -161,21 +165,25 @@ ul {
     font: inherit;
   }
   .dropdown-content {
-    display: none;
     position: absolute;
     width: 100%;
     left: 0;
     background: white;
     box-shadow: 0 0.8rem 1.6rem 0 rgba(0, 0, 0, 0.2);
     z-index: 1;
-    transition: all 0.5s ease-in-out;
+    visibility: hidden;
+    transform: translateY(-5rem);
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
   }
   &:hover {
     .dropbtn {
       color: $orangered;
     }
     .dropdown-content {
-      display: block;
+      transform: translateY(0%);
+      visibility: visible;
+      opacity: 1;
     }
   }
 }
@@ -189,30 +197,31 @@ ul {
     justify-content: space-between;
     padding-right: 10rem;
   }
-  .column {
-    color: $dark;
-    min-width: 15rem;
-    &.has-image {
-      @include medium {
-        display: none;
-      }
+}
+
+.column {
+  color: $dark;
+  min-width: 15rem;
+  &.has-image {
+    @include medium {
+      display: none;
     }
-    & > p {
-      font-weight: bold;
-      @include medium {
-        margin-left: 25%;
-      }
+  }
+  & > p {
+    font-weight: bold;
+    @include medium {
+      margin-left: 25%;
     }
-    & > a {
-      padding: 0.5rem 0;
-      text-decoration: none;
-      display: block;
-      @include medium {
-        margin-left: 25%;
-      }
-      &:hover {
-        color: $orangered;
-      }
+  }
+  & > a {
+    padding: 0.5rem 0;
+    text-decoration: none;
+    display: block;
+    @include medium {
+      margin-left: 25%;
+    }
+    &:hover {
+      color: $orangered;
     }
   }
 }

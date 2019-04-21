@@ -1,5 +1,3 @@
-import './styles/styles.scss';
-
 const toggleMenu = document.querySelector('.mobile-nav a');
 const navList = document.querySelector('.nav-list');
 const overlayContainers = document.querySelectorAll('.overlay-container');
@@ -35,12 +33,6 @@ overlayContainers.forEach(overlayContainer => {
 });
 
 /*============ Toggle nav menu ============*/
-toggleMenu.addEventListener('click', function() {
-  const { classList } = navList;
-  const openNav = 'active';
-  if (classList.contains(openNav)) {
-    classList.remove(openNav);
-  } else {
-    classList.add(openNav);
-  }
+toggleMenu.addEventListener('click', () => {
+  navList.classList.toggle('active');
 });
