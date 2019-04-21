@@ -1,17 +1,6 @@
 @import './variables';
+@import './mixins';
 
-/*============ Media Query Triggers ============*/
-@mixin medium {
-  @media screen and (max-width: 1200px) {
-    @content;
-  }
-}
-
-@mixin small {
-  @media screen and (max-width: 750px) {
-    @content;
-  }
-}
 
 /*============ Global Styles ============*/
 html {
@@ -249,8 +238,8 @@ ul {
     text-align: center;
   }
   & > h1 {
+    @include large-title;
     margin-bottom: 1rem;
-    @extend %large-title;
   }
   & > p {
     margin-bottom: 2rem;
@@ -263,7 +252,7 @@ ul {
     }
   }
   & > button {
-    @extend %orangered-button;
+    @include orangered-button;
     @media screen and (max-width: 601px) {
       font-size: 1.6rem;
       width: 14rem;
@@ -280,16 +269,16 @@ ul {
   text-align: center;
   color: $dark;
   .title {
-    @extend %medium-title;
+    @include medium-title;
     margin: 0;
     padding: 0;
   }
   .sub-paragraph {
+    @include normal-text;
     max-width: 55rem;
-    @extend %normal-text;
   }
   & > button {
-    @extend %orangered-button;
+    @include orangered-button;
   }
 }
 
@@ -345,27 +334,27 @@ ul {
     justify-content: center;
   }
   .title {
-    @extend %large-title;
+    @include large-title;
     margin: 0;
   }
   & > hr {
-    @extend %orangered-hr;
+    @include orangered-hr;
   }
 }
 
 .drinks-group {
   margin: 0;
   .sub-title {
-    @extend %medium-title;
+    @include medium-title;
     margin: 0;
   }
   .sub-paragraph {
-    @extend %normal-text;
+    @include normal-text;
     max-width: 45rem;
   }
   & > button {
     margin-top: 15%;
-    @extend %transparent-button;
+    @include transparent-button;
   }
 }
 
@@ -376,19 +365,19 @@ ul {
   flex-direction: column;
   text-align: center;
   & > hr {
-    @extend %orangered-hr;
+    @include orangered-hr;
   }
   .title {
-    @extend %medium-title;
+    @include medium-title;
     margin: 0;
   }
   .sub-paragraph {
-    @extend %normal-text;
+    @include normal-text;
     max-width: 45rem;
   }
   & > button {
     margin-top: 3rem;
-    @extend %transparent-button;
+    @include transparent-button;
   }
 }
 
@@ -422,7 +411,7 @@ ul {
         border: 2px solid $orangered;
         visibility: hidden;
         cursor: pointer;
-        @extend %flex-center;
+        @include flex-center;
       }
     }
   }
@@ -441,10 +430,10 @@ ul {
     justify-content: center;
   }
   & > hr {
-    @extend %orangered-hr;
+    @include orangered-hr;
   }
   .title {
-    @extend %large-title;
+    @include large-title;
     margin: 0;
   }
 }
@@ -452,16 +441,16 @@ ul {
 .cleanse-group {
   margin: 0;
   & > .sub-title {
-    @extend %medium-title;
+    @include medium-title;
     margin: 0;
   }
   & > .sub-paragraph {
-    @extend %normal-text;
+    @include normal-text;
     max-width: 55rem;
   }
   & > button {
     margin-top: 15%;
-    @extend %transparent-button;
+    @include transparent-button;
   }
 }
 
@@ -472,14 +461,14 @@ ul {
   align-items: center;
   flex-direction: column;
   & > hr {
-    @extend %orangered-hr;
+    @include orangered-hr;
   }
   .title {
-    @extend %large-title;
+    @include large-title;
     margin: 0;
   }
   & > button {
-    @extend %transparent-button;
+    @include transparent-button;
   }
 }
 
@@ -491,7 +480,7 @@ ul {
   & > li {
     margin: 1.5rem;
     .overlay-container {
-      @extend %flex-center;
+      @include flex-center;
       overflow: hidden;
       position: relative;
       & > img {
@@ -509,7 +498,7 @@ ul {
         border: 2px solid $orangered;
         visibility: hidden;
         cursor: pointer;
-        @extend %flex-center;
+        @include flex-center;
       }
     }
     .card-body {
@@ -561,7 +550,7 @@ ul {
       }
     }
     button {
-      @extend %transparent-button;
+      @include transparent-button;
       padding: 1rem 3.5rem;
       display: inline;
       align-self: center;
