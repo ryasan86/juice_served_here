@@ -1,11 +1,14 @@
 @import './variables';
 @import './mixins';
 
-
 /*============ Global Styles ============*/
 html {
   box-sizing: border-box;
   font-size: 10px;
+}
+
+* {
+  overflow-x: hidden;
 }
 
 *,
@@ -62,16 +65,16 @@ ul {
   display: none;
   text-align: center;
   padding: 1rem;
-  @include medium {
+  @include tablet {
     display: block;
   }
-  @include small {
+  @include mobile {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   img {
-    @include small {
+    @include mobile {
       width: 20rem;
     }
   }
@@ -79,7 +82,7 @@ ul {
     display: none;
     font-size: 2.5rem;
     width: 6rem;
-    @include small {
+    @include mobile {
       display: block;
     }
     &:hover {
@@ -100,7 +103,7 @@ ul {
   align-items: center;
   list-style-type: none;
   cursor: pointer;
-  @include small {
+  @include mobile {
     flex-direction: column;
     max-height: 0;
   }
@@ -109,7 +112,7 @@ ul {
   }
   .has-horizontal-logo {
     padding: 0 6rem;
-    @include medium {
+    @include tablet {
       display: none;
     }
   }
@@ -119,7 +122,7 @@ ul {
   &.login {
     position: absolute;
     left: 2rem;
-    @include small {
+    @include mobile {
       position: static;
       text-transform: uppercase;
     }
@@ -127,7 +130,7 @@ ul {
   &.box-hover {
     position: absolute;
     right: 2rem;
-    @include small {
+    @include mobile {
       position: static;
     }
   }
@@ -182,10 +185,10 @@ ul {
   justify-content: space-between;
   flex-wrap: wrap;
   padding-left: 10rem;
-  @include medium {
+  @include tablet {
     padding: 2.5rem 5rem;
   }
-  @include small {
+  @include mobile {
     padding: 1.25rem 2.5rem;
   }
 }
@@ -195,13 +198,13 @@ ul {
   min-width: 15rem;
   list-style-type: none;
   &.has-image {
-    @include medium {
+    @include tablet {
       display: none;
     }
   }
   h4 {
     font-weight: bold;
-    @include medium {
+    @include tablet {
       margin-left: 25%;
     }
   }
@@ -209,7 +212,7 @@ ul {
     a {
       padding: 0.5rem 0;
       display: block;
-      @include medium {
+      @include tablet {
         margin-left: 25%;
       }
       &:hover {
@@ -523,7 +526,7 @@ ul {
   flex-wrap: wrap;
   border-top: 1px solid lightgray;
   padding: 0 10rem;
-  @include small {
+  @include mobile {
     padding: 1rem;
   }
 }
@@ -534,19 +537,26 @@ ul {
     color: $dark;
     font-size: 2rem;
     margin: 0;
+    @include mobile {
+      text-align: center;
+    }
   }
   .field {
     margin-top: 1.5rem;
     display: flex;
     flex-wrap: wrap;
+    @include mobile {
+      justify-content: center;
+    }
     input {
       padding: 1rem;
       font-size: 1.8rem;
       margin-right: 1rem;
       align-self: center;
       width: 32rem;
-      @include small {
+      @include mobile {
         width: 80%;
+        margin-bottom: 1rem;
       }
     }
     button {

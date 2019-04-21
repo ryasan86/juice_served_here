@@ -1,13 +1,13 @@
 @import './variables';
 
 /*============ Media Query Triggers ============*/
-@mixin medium {
+@mixin tablet {
   @media screen and (max-width: 1200px) {
     @content;
   }
 }
 
-@mixin small {
+@mixin mobile {
   @media screen and (max-width: 750px) {
     @content;
   }

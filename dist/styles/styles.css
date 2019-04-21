@@ -7,6 +7,9 @@ html {
   box-sizing: border-box;
   font-size: 10px; }
 
+* {
+  overflow-x: hidden; }
+
 *,
 *:before,
 *:after {
@@ -565,10 +568,16 @@ ul {
     color: #231f20;
     font-size: 2rem;
     margin: 0; }
+    @media screen and (max-width: 750px) {
+      .subscribe h4 {
+        text-align: center; } }
   .subscribe .field {
     margin-top: 1.5rem;
     display: flex;
     flex-wrap: wrap; }
+    @media screen and (max-width: 750px) {
+      .subscribe .field {
+        justify-content: center; } }
     .subscribe .field input {
       padding: 1rem;
       font-size: 1.8rem;
@@ -577,7 +586,8 @@ ul {
       width: 32rem; }
       @media screen and (max-width: 750px) {
         .subscribe .field input {
-          width: 80%; } }
+          width: 80%;
+          margin-bottom: 1rem; } }
     .subscribe .field button {
       border: 2px solid #f95951;
       color: #f95951;
