@@ -3,7 +3,7 @@ const navList = document.querySelector('.nav-list');
 const overlayContainers = document.querySelectorAll('.overlay-container');
 const navItems = document.querySelectorAll('.nav-item');
 
-/*============ Nav link hover ============*/
+// /*============ Nav link hover ============*/
 navItems.forEach(navItem => {
   const activeLink = 'active';
   navItem.addEventListener('mouseenter', function() {
