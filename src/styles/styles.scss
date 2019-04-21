@@ -106,7 +106,9 @@ ul {
 }
 
 .nav-list {
-  @extend %flex-center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   list-style-type: none;
   cursor: pointer;
   @include small {
@@ -136,8 +138,9 @@ ul {
       text-transform: uppercase;
     }
     & > a {
-      @extend %flex-center;
-      display: block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       white-space: nowrap;
       padding: 1.5rem;
       &.active {
@@ -165,6 +168,7 @@ ul {
     background: white;
     box-shadow: 0 0.8rem 1.6rem 0 rgba(0, 0, 0, 0.2);
     z-index: 1;
+    transition: all 0.5s ease-in-out;
   }
   &:hover {
     .dropbtn {
@@ -185,31 +189,30 @@ ul {
     justify-content: space-between;
     padding-right: 10rem;
   }
-}
-
-.column {
-  color: $dark;
-  min-width: 15rem;
-  &.has-image {
-    @include medium {
-      display: none;
+  .column {
+    color: $dark;
+    min-width: 15rem;
+    &.has-image {
+      @include medium {
+        display: none;
+      }
     }
-  }
-  & > p {
-    font-weight: bold;
-    @include medium {
-      margin-left: 25%;
+    & > p {
+      font-weight: bold;
+      @include medium {
+        margin-left: 25%;
+      }
     }
-  }
-  & > a {
-    padding: 0.5rem 0;
-    text-decoration: none;
-    display: block;
-    @include medium {
-      margin-left: 25%;
-    }
-    &:hover {
-      color: $orangered;
+    & > a {
+      padding: 0.5rem 0;
+      text-decoration: none;
+      display: block;
+      @include medium {
+        margin-left: 25%;
+      }
+      &:hover {
+        color: $orangered;
+      }
     }
   }
 }
