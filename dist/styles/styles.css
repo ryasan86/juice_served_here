@@ -1,15 +1,15 @@
 /*============ Theme Colors ============*/
 /*============ Theme Colors ============*/
 /*============ Media Query Triggers ============*/
-/*============ Common ============*/
+/*============ Font Sizes ============*/
+/*============ UI ============*/
 /*============ Global Styles ============*/
 html {
   box-sizing: border-box;
   font-size: 10px; }
 
 * {
-  overflow-x: hidden;
-  outline: 1px solid red; }
+  overflow-x: hidden; }
 
 *,
 *:before,
@@ -264,26 +264,28 @@ ul {
       color: #f95951; }
 
 .step-list {
-  list-style-type: none;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
-  width: 80%; }
+  list-style-type: none;
+  width: 100%; }
   .step-list li {
+    font-size: 1.4rem;
+    margin: 2rem 6rem;
     position: relative;
-    font-size: 1.4rem; }
+    min-width: 27rem; }
     .step-list li h1 {
       font-size: 18rem;
       color: #f95951;
       margin: 0;
       padding: 0; }
     .step-list li p {
+      text-align: left;
+      width: 70%;
       position: absolute;
       top: 35%;
-      left: -30%;
       font-size: inherit;
       font-weight: 600;
-      width: 10rem;
       white-space: nowrap;
       color: #231f20; }
       .step-list li p:after {
@@ -291,11 +293,7 @@ ul {
         background: #231f20;
         height: 1px;
         display: block;
-        width: 160%; }
-    .step-list li .step-meta {
-      position: absolute;
-      top: 45%;
-      left: -30%; }
+        width: 100%; }
 
 /*============ Drinks ============*/
 .drinks {
@@ -396,21 +394,24 @@ ul {
 .drink-list {
   width: 100%;
   list-style-type: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 30rem);
-  grid-gap: 4rem;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center; }
+  .drink-list li {
+    margin: 1rem 1.5rem; }
 
 .overlay-container {
-  width: 100%; }
+  position: relative;
+  display: flex; }
   .overlay-container img {
-    width: 100%; }
+    min-height: 22rem; }
   .overlay-container .img-overlay {
     display: flex;
     justify-content: center;
     align-items: center;
     top: 0;
     left: 0;
+    width: 32rem;
     width: 100%;
     height: 100%;
     background: rgba(255, 255, 255, 0.5);
@@ -504,10 +505,11 @@ ul {
 .locations-list {
   width: 100%;
   list-style-type: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 30rem);
-  grid-gap: 4rem;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center; }
+  .locations-list li {
+    margin: 1.5rem; }
 
 .card-body {
   margin-top: 1rem; }
@@ -530,7 +532,8 @@ ul {
       padding: 1rem; } }
 
 .subscribe {
-  padding: 2.5rem 0; }
+  padding: 2.5rem 0;
+  min-width: 40%; }
   .subscribe h4 {
     color: #231f20;
     font-size: 2rem;
@@ -568,8 +571,10 @@ ul {
 
 .footer-links-row {
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
-  padding: 2.5rem 0; }
+  padding: 2.5rem 0;
+  min-width: 40%; }
   .footer-links-row ul {
     list-style-type: none; }
 

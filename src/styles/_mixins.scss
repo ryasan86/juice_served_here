@@ -13,7 +13,7 @@
   }
 }
 
-/*============ Common ============*/
+/*============ Font Sizes ============*/
 @mixin large-title {
   font-size: 4.5rem;
   @media screen and (max-width: 601px) {
@@ -44,6 +44,7 @@
   }
 }
 
+/*============ UI ============*/
 @mixin transparent-button {
   border: 2px solid $orangered;
   color: $orangered;
