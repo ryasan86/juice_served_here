@@ -473,6 +473,9 @@ ul {
       margin-right: 1rem;
       align-self: center;
       width: 32rem; }
+      @media screen and (max-width: 750px) {
+        .subscribe .field input {
+          width: 80%; } }
     .subscribe .field button {
       padding: 1rem 3.5rem;
       display: inline;
