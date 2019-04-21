@@ -8,7 +8,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "dev": "webpack --watch --config webpack.config.js",
     "start": "concurrently \"webpack --watch --config webpack.config.js\" \"sass --watch src\\styles:dist\\styles\""
   },
   "devDependencies": {

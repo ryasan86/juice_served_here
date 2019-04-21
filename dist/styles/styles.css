@@ -1,50 +1,50 @@
 /*============ Theme Colors ============*/
 /*============ Extends ============*/
-.pick-your-pleasure .drink-list > li .overlay-container .img-overlay, .locations-list > li .overlay-container, .locations-list > li .overlay-container .img-overlay {
+.drink-list > li .overlay-container .img-overlay, .locations-list > li .overlay-container, .locations-list > li .overlay-container .img-overlay {
   display: flex;
   justify-content: center;
   align-items: center; }
 
-.home .header-text > h1, .drinks .title, .cleanse .title, .locations .title {
+.hero-text > h1, .drinks .title, .cleanse .title, .locations .title {
   font-size: 4.5rem; }
   @media screen and (max-width: 601px) {
-    .home .header-text > h1, .drinks .title, .cleanse .title, .locations .title {
+    .hero-text > h1, .drinks .title, .cleanse .title, .locations .title {
       font-size: 3rem; } }
   @media screen and (max-width: 460px) {
-    .home .header-text > h1, .drinks .title, .cleanse .title, .locations .title {
+    .hero-text > h1, .drinks .title, .cleanse .title, .locations .title {
       font-size: 2.8rem; } }
 
-.buy-box .title, .drinks .drinks-group .sub-title, .pick-your-pleasure .title, .cleanse .cleanse-group > .sub-title {
+.buy-box .title, .drinks-group .sub-title, .pick-your-pleasure .title, .cleanse-group > .sub-title {
   font-size: 3rem; }
   @media screen and (max-width: 601px) {
-    .buy-box .title, .drinks .drinks-group .sub-title, .pick-your-pleasure .title, .cleanse .cleanse-group > .sub-title {
+    .buy-box .title, .drinks-group .sub-title, .pick-your-pleasure .title, .cleanse-group > .sub-title {
       font-size: 2rem; } }
   @media screen and (max-width: 460px) {
-    .buy-box .title, .drinks .drinks-group .sub-title, .pick-your-pleasure .title, .cleanse .cleanse-group > .sub-title {
+    .buy-box .title, .drinks-group .sub-title, .pick-your-pleasure .title, .cleanse-group > .sub-title {
       font-size: 1.8rem; } }
 
-.buy-box .sub-paragraph, .drinks .drinks-group .sub-paragraph, .pick-your-pleasure .sub-paragraph, .cleanse .cleanse-group > .sub-paragraph {
+.buy-box .sub-paragraph, .drinks-group .sub-paragraph, .pick-your-pleasure .sub-paragraph, .cleanse-group > .sub-paragraph {
   font-size: 1.8rem; }
   @media screen and (max-width: 601px) {
-    .buy-box .sub-paragraph, .drinks .drinks-group .sub-paragraph, .pick-your-pleasure .sub-paragraph, .cleanse .cleanse-group > .sub-paragraph {
+    .buy-box .sub-paragraph, .drinks-group .sub-paragraph, .pick-your-pleasure .sub-paragraph, .cleanse-group > .sub-paragraph {
       font-size: 1.5rem; } }
   @media screen and (max-width: 460px) {
-    .buy-box .sub-paragraph, .drinks .drinks-group .sub-paragraph, .pick-your-pleasure .sub-paragraph, .cleanse .cleanse-group > .sub-paragraph {
+    .buy-box .sub-paragraph, .drinks-group .sub-paragraph, .pick-your-pleasure .sub-paragraph, .cleanse-group > .sub-paragraph {
       font-size: 1.3rem; } }
 
-.drinks .drinks-group > button, .pick-your-pleasure > button, .cleanse .cleanse-group > button, .locations > button, .footer > form .field > button {
+.drinks-group > button, .pick-your-pleasure > button, .cleanse-group > button, .locations > button, .subscribe .field button {
   border: 2px solid #f95951;
   color: #f95951;
   background-color: transparent; }
-  .drinks .drinks-group > button:hover, .pick-your-pleasure > button:hover, .cleanse .cleanse-group > button:hover, .locations > button:hover, .footer > form .field > button:hover {
+  .drinks-group > button:hover, .pick-your-pleasure > button:hover, .cleanse-group > button:hover, .locations > button:hover, .subscribe .field button:hover {
     background-color: #f95951;
     color: white; }
 
-.home .header-text > button, .buy-box > button {
+.hero-text > button, .buy-box > button {
   border: 2px solid #f95951;
   color: white;
   background-color: #f95951; }
-  .home .header-text > button:hover, .buy-box > button:hover {
+  .hero-text > button:hover, .buy-box > button:hover {
     background-color: white;
     color: #f95951; }
 
@@ -199,39 +199,41 @@ ul {
   visibility: visible;
   opacity: 1; }
 
-.row {
+.dropdown-row {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   padding-left: 10rem; }
   @media screen and (max-width: 1200px) {
-    .row {
-      justify-content: space-between;
-      padding-right: 10rem; } }
+    .dropdown-row {
+      padding: 2.5rem 5rem; } }
+  @media screen and (max-width: 750px) {
+    .dropdown-row {
+      padding: 1.25rem 2.5rem; } }
 
 .column {
   color: #231f20;
-  min-width: 15rem; }
+  min-width: 15rem;
+  list-style-type: none; }
   @media screen and (max-width: 1200px) {
     .column.has-image {
       display: none; } }
-  .column > p {
+  .column h4 {
     font-weight: bold; }
     @media screen and (max-width: 1200px) {
-      .column > p {
+      .column h4 {
         margin-left: 25%; } }
-  .column > a {
+  .column li a {
     padding: 0.5rem 0;
-    text-decoration: none;
     display: block; }
     @media screen and (max-width: 1200px) {
-      .column > a {
+      .column li a {
         margin-left: 25%; } }
-    .column > a:hover {
+    .column li a:hover {
       color: #f95951; }
 
-/*============ Home ============*/
-.home {
+/*============ Hero ============*/
+.hero {
   height: 80vh;
   background: url(./../assets/images/hero-bg.png) no-repeat center;
   background-size: cover;
@@ -239,28 +241,29 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: center; }
-  .home .header-text {
-    width: 80%;
-    color: #231f20; }
-    @media screen and (max-width: 676px) {
-      .home .header-text {
-        width: 95%;
-        text-align: center; } }
-    .home .header-text > h1 {
-      margin-bottom: 1rem; }
-    .home .header-text > p {
-      margin-bottom: 2rem;
-      font-size: 1.8rem; }
-      @media screen and (max-width: 601px) {
-        .home .header-text > p {
-          width: 85%;
-          display: block;
-          margin: auto;
-          margin-bottom: 2rem; } }
+
+.hero-text {
+  width: 80%;
+  color: #231f20; }
+  @media screen and (max-width: 676px) {
+    .hero-text {
+      width: 95%;
+      text-align: center; } }
+  .hero-text > h1 {
+    margin-bottom: 1rem; }
+  .hero-text > p {
+    margin-bottom: 2rem;
+    font-size: 1.8rem; }
     @media screen and (max-width: 601px) {
-      .home .header-text > button {
-        font-size: 1.6rem;
-        width: 14rem; } }
+      .hero-text > p {
+        width: 85%;
+        display: block;
+        margin: auto;
+        margin-bottom: 2rem; } }
+  @media screen and (max-width: 601px) {
+    .hero-text > button {
+      font-size: 1.6rem;
+      width: 14rem; } }
 
 /*============ Buy It By The Box ============*/
 .buy-box {
@@ -279,12 +282,11 @@ ul {
 .step-list {
   list-style-type: none;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap; }
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 80%; }
   .step-list > li {
-    position: relative;
-    width: 14rem;
-    margin: 0 10rem; }
+    position: relative; }
     .step-list > li .big-number {
       font-size: 18rem;
       color: #f95951;
@@ -324,14 +326,15 @@ ul {
       justify-content: center; } }
   .drinks .title {
     margin: 0; }
-  .drinks .drinks-group {
+
+.drinks-group {
+  margin: 0; }
+  .drinks-group .sub-title {
     margin: 0; }
-    .drinks .drinks-group .sub-title {
-      margin: 0; }
-    .drinks .drinks-group .sub-paragraph {
-      max-width: 45rem; }
-    .drinks .drinks-group > button {
-      margin-top: 15%; }
+  .drinks-group .sub-paragraph {
+    max-width: 45rem; }
+  .drinks-group > button {
+    margin-top: 15%; }
 
 /*============ Pick Your Pleasure ============*/
 .pick-your-pleasure {
@@ -343,37 +346,38 @@ ul {
     margin: 0; }
   .pick-your-pleasure .sub-paragraph {
     max-width: 45rem; }
-  .pick-your-pleasure .drink-list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    list-style-type: none; }
-    @media screen and (max-width: 1000px) {
-      .pick-your-pleasure .drink-list {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center; } }
-    .pick-your-pleasure .drink-list > li {
-      margin: 0.5rem 1rem 0.5rem 1rem;
-      position: relative; }
-      .pick-your-pleasure .drink-list > li .overlay-container {
-        width: 100%; }
-        .pick-your-pleasure .drink-list > li .overlay-container > img {
-          width: 30rem; }
-        .pick-your-pleasure .drink-list > li .overlay-container .img-overlay {
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: rgba(255, 255, 255, 0.5);
-          position: absolute;
-          font-weight: bolder;
-          color: #f95951;
-          border: 2px solid #f95951;
-          visibility: hidden;
-          cursor: pointer; }
   .pick-your-pleasure > button {
     margin-top: 3rem; }
+
+.drink-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style-type: none; }
+  @media screen and (max-width: 1000px) {
+    .drink-list {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; } }
+  .drink-list > li {
+    margin: 0.5rem 1rem 0.5rem 1rem;
+    position: relative; }
+    .drink-list > li .overlay-container {
+      width: 100%; }
+      .drink-list > li .overlay-container > img {
+        width: 30rem; }
+      .drink-list > li .overlay-container .img-overlay {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.5);
+        position: absolute;
+        font-weight: bolder;
+        color: #f95951;
+        border: 2px solid #f95951;
+        visibility: hidden;
+        cursor: pointer; }
 
 /*============ Cleanse ============*/
 .cleanse {
@@ -389,14 +393,15 @@ ul {
       justify-content: center; } }
   .cleanse .title {
     margin: 0; }
-  .cleanse .cleanse-group {
+
+.cleanse-group {
+  margin: 0; }
+  .cleanse-group > .sub-title {
     margin: 0; }
-    .cleanse .cleanse-group > .sub-title {
-      margin: 0; }
-    .cleanse .cleanse-group > .sub-paragraph {
-      max-width: 55rem; }
-    .cleanse .cleanse-group > button {
-      margin-top: 15%; }
+  .cleanse-group > .sub-paragraph {
+    max-width: 55rem; }
+  .cleanse-group > button {
+    margin-top: 15%; }
 
 /*============ Locations ============*/
 .locations {
@@ -418,7 +423,7 @@ ul {
       overflow: hidden;
       position: relative; }
       .locations-list > li .overlay-container > img {
-        height: 20rem; }
+        height: 18rem; }
       .locations-list > li .overlay-container .img-overlay {
         top: 0;
         left: 0;
@@ -445,50 +450,39 @@ ul {
   min-height: 40vh;
   display: flex;
   justify-content: space-around;
-  padding: 10rem 15rem;
-  border-top: 1px solid lightgray; }
-  @media screen and (max-width: 1000px) {
+  flex-wrap: wrap;
+  border-top: 1px solid lightgray;
+  padding: 0 10rem; }
+  @media screen and (max-width: 750px) {
     .footer {
-      flex-direction: column;
-      justify-content: center; } }
-  @media screen and (max-width: 1000px) {
-    .footer > form {
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-      margin-bottom: 5rem; } }
-  .footer > form > h4 {
+      padding: 1rem; } }
+
+.subscribe {
+  margin-top: 5rem; }
+  .subscribe h4 {
     color: #231f20;
     font-size: 2rem;
     margin: 0; }
-  .footer > form .field {
+  .subscribe .field {
     margin-top: 1.5rem;
-    display: flex; }
-    @media screen and (max-width: 1000px) {
-      .footer > form .field {
-        flex-direction: column;
-        justify-content: center; } }
-    .footer > form .field > input {
-      min-width: 35rem;
+    display: flex;
+    flex-wrap: wrap; }
+    .subscribe .field input {
       padding: 1rem;
       font-size: 1.8rem;
       margin-right: 1rem;
-      align-self: center; }
-      @media screen and (max-width: 1000px) {
-        .footer > form .field > input {
-          margin-bottom: 1rem; } }
-    .footer > form .field > button {
+      align-self: center;
+      width: 32rem; }
+    .subscribe .field button {
       padding: 1rem 3.5rem;
       display: inline;
       align-self: center; }
-  .footer > .footer-link-categories {
-    display: flex;
-    justify-content: center; }
-    .footer > .footer-link-categories > ul {
-      list-style-type: none;
-      margin: 0 5rem;
-      color: #231f20; }
-      .footer > .footer-link-categories > ul > h4 {
-        font-weight: bolder; }
+
+.footer-link-categories {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem; }
+  .footer-link-categories ul {
+    list-style-type: none; }
 
 /*# sourceMappingURL=styles.css.map */
