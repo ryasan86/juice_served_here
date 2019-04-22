@@ -140,7 +140,7 @@ ul {
   transform: translateY(-5rem);
   opacity: 0;
   transition: all 0.2s ease-in-out; }
-.dropdown:hover .dropbtn {
+.dropdown:hover .dropt {
   color: #f95951; }
 .dropdown:hover .dropdown-content {
   transform: translateY(0%);
@@ -270,7 +270,8 @@ ul {
     font-size: 1.4rem;
     margin: 0.1rem 6rem;
     position: relative;
-    min-width: 27rem; }
+    min-width: 27rem;
+    line-height: 1.5; }
     .step-list li h1 {
       font-size: 18rem;
       color: #f95951;
@@ -294,7 +295,7 @@ ul {
     .step-list li span {
       text-align: left;
       position: absolute;
-      top: 47%;
+      top: 50%;
       left: 0; }
 
 /*============ Drinks ============*/
