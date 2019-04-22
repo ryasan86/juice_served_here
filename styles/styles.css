@@ -8,9 +8,6 @@ html {
   box-sizing: border-box;
   font-size: 10px; }
 
-* {
-  overflow-x: hidden; }
-
 *,
 *:before,
 *:after {
@@ -21,8 +18,7 @@ body {
   margin: 0;
   font-family: sans-serif;
   line-height: 2;
-  font-size: 1.2em;
-  overflow-x: hidden; }
+  font-size: 1.2em; }
 
 a {
   color: inherit;
@@ -56,7 +52,8 @@ ul {
 .mobile-nav {
   display: none;
   text-align: center;
-  padding: 1rem; }
+  padding: 1rem;
+  background: white; }
   @media screen and (max-width: 1200px) {
     .mobile-nav {
       display: block; } }
@@ -87,7 +84,8 @@ ul {
   justify-content: center;
   align-items: center;
   list-style-type: none;
-  cursor: pointer; }
+  cursor: pointer;
+  z-index: -10; }
   @media screen and (max-width: 750px) {
     .nav-list {
       flex-direction: column;
@@ -137,6 +135,7 @@ ul {
   background: white;
   box-shadow: 0 0.8rem 1.6rem 0 rgba(0, 0, 0, 0.2);
   z-index: 1;
+  display: none;
   visibility: hidden;
   transform: translateY(-5rem);
   opacity: 0;
@@ -145,6 +144,7 @@ ul {
   color: #f95951; }
 .dropdown:hover .dropdown-content {
   transform: translateY(0%);
+  display: block;
   visibility: visible;
   opacity: 1; }
 
@@ -404,13 +404,11 @@ ul {
   flex-wrap: wrap;
   justify-content: center; }
   .drink-list li {
-    margin: 1rem 1.5rem; }
+    margin: 1.5rem; }
 
 .overlay-container {
   position: relative;
   display: flex; }
-  .overlay-container img {
-    min-height: 22rem; }
   .overlay-container .img-overlay {
     display: flex;
     justify-content: center;
@@ -516,7 +514,12 @@ ul {
   flex-wrap: wrap;
   justify-content: center; }
   .locations-list li {
+    flex-direction: column;
     margin: 1.5rem; }
+    .locations-list li .overlay-container {
+      width: 30rem;
+      height: 20rem;
+      overflow: hidden; }
 
 .card-body {
   margin-top: 1rem; }
@@ -539,8 +542,8 @@ ul {
       padding: 1rem; } }
 
 .subscribe {
-  padding: 2.5rem 0;
-  min-width: 40%; }
+  min-width: 40%;
+  margin-top: 3rem; }
   .subscribe h4 {
     color: #231f20;
     font-size: 2rem;
@@ -578,11 +581,24 @@ ul {
 
 .footer-links-row {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   flex-wrap: wrap;
-  padding: 2.5rem 0;
-  min-width: 40%; }
+  min-width: 40%;
+  margin-top: 3rem; }
+  @media screen and (max-width: 750px) {
+    .footer-links-row {
+      justify-content: flex-start; } }
   .footer-links-row ul {
     list-style-type: none; }
+    .footer-links-row ul h4 {
+      margin: 0 0 2rem; }
+      @media screen and (max-width: 1200px) {
+        .footer-links-row ul h4 {
+          margin-left: 25%; } }
+      @media screen and (max-width: 750px) {
+        .footer-links-row ul h4 {
+          margin-top: 2rem; } }
+    .footer-links-row ul a {
+      padding: 0; }
 
 /*# sourceMappingURL=styles.css.map */
