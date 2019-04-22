@@ -166,7 +166,7 @@ ul {
     transition: all 0.2s ease-in-out;
   }
   &:hover {
-    .dropbtn {
+    .dropt {
       color: $orangered;
     }
     .dropdown-content {
@@ -285,6 +285,7 @@ ul {
     margin: 0.1rem 6rem;
     position: relative;
     min-width: 27rem;
+    line-height: 1.5;
     h1 {
       font-size: 18rem;
       color: $orangered;
@@ -311,7 +312,7 @@ ul {
     span {
       text-align: left;
       position: absolute;
-      top: 47%;
+      top: 50%;
       left: 0;
     }
   }
