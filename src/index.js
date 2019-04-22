@@ -1,5 +1,5 @@
 const toggleMenu = document.querySelector('.mobile-nav a');
-const navList = document.querySelector('.navbar');
+const navbar = document.querySelector('.navbar');
 const overlayContainers = document.querySelectorAll('.overlay-container');
 const navItems = document.querySelectorAll('.nav-item');
 
@@ -33,5 +33,5 @@ overlayContainers.forEach(overlayContainer => {
 
 /*============ mobile burger menu ============*/
 toggleMenu.addEventListener('click', () => {
-  navList.classList.toggle('active');
+  navbar.classList.toggle('active');
 });
