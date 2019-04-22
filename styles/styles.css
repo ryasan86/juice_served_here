@@ -39,6 +39,9 @@ ul {
   padding: 0;
   margin: 0; }
 
+header {
+  position: relative; }
+
 /*============ Pencil Ad ============*/
 .pencil-ad {
   padding: 1rem 0;
@@ -78,9 +81,6 @@ ul {
         display: block; } }
     .mobile-nav a:hover {
       background: rgba(0, 0, 0, 0.1); }
-
-header {
-  position: relative; }
 
 .navbar {
   width: 100%;
