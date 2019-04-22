@@ -212,10 +212,10 @@ ul {
     font-size: 1.8rem; }
     @media screen and (max-width: 601px) {
       .hero-text p {
-        width: 85%;
-        display: block;
-        margin: auto;
-        margin-bottom: 2rem; } }
+        font-size: 1.5rem; } }
+    @media screen and (max-width: 460px) {
+      .hero-text p {
+        font-size: 1.3rem; } }
   .hero-text button {
     border: 2px solid #f95951;
     color: white;
@@ -223,10 +223,6 @@ ul {
     .hero-text button:hover {
       background-color: white;
       color: #f95951; }
-    @media screen and (max-width: 601px) {
-      .hero-text button {
-        font-size: 1.6rem;
-        width: 14rem; } }
 
 /*============ Buy It By The Box ============*/
 .buy-box {
@@ -310,7 +306,7 @@ ul {
   background: url(./../assets/images/drinks-bg.png) no-repeat center;
   background-size: cover;
   color: #231f20; }
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 750px) {
     .drinks {
       justify-content: center; } }
   .drinks h1 {
@@ -436,7 +432,7 @@ ul {
   background: url(./../assets/images/cleanse-bg.png) no-repeat center;
   background-size: cover;
   color: #231f20; }
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 750px) {
     .cleanse {
       justify-content: center; } }
   .cleanse h1 {

@@ -244,20 +244,10 @@ ul {
   }
   p {
     margin-bottom: 2rem;
-    font-size: 1.8rem;
-    @media screen and (max-width: 601px) {
-      width: 85%;
-      display: block;
-      margin: auto;
-      margin-bottom: 2rem;
-    }
+    @include normal-text;
   }
   button {
     @include orangered-button;
-    @media screen and (max-width: 601px) {
-      font-size: 1.6rem;
-      width: 14rem;
-    }
   }
 }
 
@@ -336,7 +326,7 @@ ul {
   background: url(./../assets/images/drinks-bg.png) no-repeat center;
   background-size: cover;
   color: $dark;
-  @media screen and (max-width: 1000px) {
+  @include mobile {
     justify-content: center;
   }
   h1 {
@@ -430,7 +420,7 @@ ul {
   background: url(./../assets/images/cleanse-bg.png) no-repeat center;
   background-size: cover;
   color: $dark;
-  @media screen and (max-width: 1000px) {
+  @include mobile {
     justify-content: center;
   }
   h1 {
