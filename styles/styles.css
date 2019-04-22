@@ -84,12 +84,12 @@ ul {
   justify-content: center;
   align-items: center;
   list-style-type: none;
-  cursor: pointer;
-  z-index: -10; }
+  cursor: pointer; }
   @media screen and (max-width: 750px) {
     .nav-list {
       flex-direction: column;
-      max-height: 0; } }
+      max-height: 0;
+      z-index: -10; } }
   .nav-list.active {
     max-height: 100%; }
   .nav-list .has-horizontal-logo {
@@ -140,7 +140,7 @@ ul {
   transform: translateY(-5rem);
   opacity: 0;
   transition: all 0.2s ease-in-out; }
-.dropdown:hover .dropt {
+.dropdown:hover .dropbtn {
   color: #f95951; }
 .dropdown:hover .dropdown-content {
   transform: translateY(0%);
