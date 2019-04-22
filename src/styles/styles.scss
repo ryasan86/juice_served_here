@@ -98,10 +98,10 @@ ul {
   align-items: center;
   list-style-type: none;
   cursor: pointer;
-  z-index: -10;
   @include mobile {
     flex-direction: column;
     max-height: 0;
+    z-index: -10;
   }
   &.active {
     max-height: 100%;
@@ -166,7 +166,7 @@ ul {
     transition: all 0.2s ease-in-out;
   }
   &:hover {
-    .dropt {
+    .dropbtn {
       color: $orangered;
     }
     .dropdown-content {
