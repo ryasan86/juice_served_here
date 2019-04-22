@@ -3,7 +3,7 @@ const navList = document.querySelector('.nav-list');
 const overlayContainers = document.querySelectorAll('.overlay-container');
 const navItems = document.querySelectorAll('.nav-item');
 
-// /*============ Nav link hover ============*/
+/*============ active nav link ============*/
 navItems.forEach(navItem => {
   const activeLink = 'active';
   navItem.addEventListener('mouseenter', function() {
@@ -18,7 +18,7 @@ navItems.forEach(navItem => {
   });
 });
 
-/*============ Images with overlays hover ============*/
+/*============ images with overlays ============*/
 overlayContainers.forEach(overlayContainer => {
   let overlay;
 
@@ -32,7 +32,7 @@ overlayContainers.forEach(overlayContainer => {
   });
 });
 
-/*============ Toggle nav menu ============*/
+/*============ mobile burger menu ============*/
 toggleMenu.addEventListener('click', () => {
   navList.classList.toggle('active');
 });

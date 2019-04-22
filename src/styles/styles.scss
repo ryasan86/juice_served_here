@@ -90,6 +90,8 @@ ul {
 .navbar {
   display: flex;
   justify-content: space-around;
+  background: white;
+  position: relative;
 }
 
 .nav-list {
@@ -159,10 +161,7 @@ ul {
     left: 0;
     background: white;
     box-shadow: 0 0.8rem 1.6rem 0 rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    display: none;
     visibility: hidden;
-    transform: translateY(-5rem);
     opacity: 0;
     transition: all 0.2s ease-in-out;
   }
@@ -171,8 +170,6 @@ ul {
       color: $orangered;
     }
     .dropdown-content {
-      transform: translateY(0%);
-      display: block;
       visibility: visible;
       opacity: 1;
     }
@@ -230,6 +227,7 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: -10;
 }
 
 .hero-text {
