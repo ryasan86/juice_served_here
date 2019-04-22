@@ -44,6 +44,10 @@ ul {
   margin: 0;
 }
 
+header {
+  position: relative;
+}
+
 /*============ Pencil Ad ============*/
 .pencil-ad {
   padding: 1rem 0;
@@ -58,6 +62,7 @@ ul {
 }
 
 /*============ Navigation ============*/
+
 .mobile-nav {
   z-index: 10;
   display: none;
@@ -89,10 +94,6 @@ ul {
       background: rgba(0, 0, 0, 0.1);
     }
   }
-}
-
-header {
-  position: relative;
 }
 
 .navbar {
