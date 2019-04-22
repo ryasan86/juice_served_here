@@ -7,11 +7,6 @@ html {
   font-size: 10px;
 }
 
-* {
-  overflow-x: hidden;
-  // outline: 1px solid red;
-}
-
 *,
 *:before,
 *:after {
@@ -24,7 +19,6 @@ body {
   font-family: sans-serif;
   line-height: 2;
   font-size: 1.2em;
-  overflow-x: hidden;
 }
 
 a {
@@ -66,6 +60,7 @@ ul {
   display: none;
   text-align: center;
   padding: 1rem;
+  background: white;
   @include tablet {
     display: block;
   }
@@ -103,6 +98,7 @@ ul {
   align-items: center;
   list-style-type: none;
   cursor: pointer;
+  z-index: -10;
   @include mobile {
     flex-direction: column;
     max-height: 0;
@@ -163,6 +159,7 @@ ul {
     background: white;
     box-shadow: 0 0.8rem 1.6rem 0 rgba(0, 0, 0, 0.2);
     z-index: 1;
+    display: none;
     visibility: hidden;
     transform: translateY(-5rem);
     opacity: 0;
@@ -174,6 +171,7 @@ ul {
     }
     .dropdown-content {
       transform: translateY(0%);
+      display: block;
       visibility: visible;
       opacity: 1;
     }
@@ -396,16 +394,13 @@ ul {
   flex-wrap: wrap;
   justify-content: center;
   li {
-    margin: 1rem 1.5rem;
+    margin: 1.5rem;
   }
 }
 
 .overlay-container {
   position: relative;
   display: flex;
-  img {
-    min-height: 22rem;
-  }
   .img-overlay {
     display: flex;
     justify-content: center;
@@ -485,7 +480,13 @@ ul {
   flex-wrap: wrap;
   justify-content: center;
   li {
+    flex-direction: column;
     margin: 1.5rem;
+    .overlay-container {
+      width: 30rem;
+      height: 20rem;
+      overflow: hidden;
+    }
   }
 }
 
@@ -514,8 +515,8 @@ ul {
 }
 
 .subscribe {
-  padding: 2.5rem 0;
   min-width: 40%;
+  margin-top: 3rem;
   h4 {
     color: $dark;
     font-size: 2rem;
@@ -553,11 +554,26 @@ ul {
 
 .footer-links-row {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   flex-wrap: wrap;
-  padding: 2.5rem 0;
   min-width: 40%;
+  margin-top: 3rem;
+  @include mobile {
+    justify-content: flex-start;
+  }
   ul {
     list-style-type: none;
+    h4 {
+      margin: 0 0 2rem;
+      @include tablet {
+        margin-left: 25%;
+      }
+      @include mobile {
+        margin-top: 2rem;
+      }
+    }
+    a {
+      padding: 0;
+    }
   }
 }
