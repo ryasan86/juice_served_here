@@ -91,7 +91,8 @@ ul {
       max-height: 0;
       z-index: -10; } }
   .nav-list.active {
-    max-height: 100%; }
+    max-height: 100%;
+    z-index: auto; }
   .nav-list .has-horizontal-logo {
     padding: 0 6rem; }
     @media screen and (max-width: 1200px) {
@@ -159,14 +160,14 @@ ul {
   @media screen and (max-width: 750px) {
     .dropdown-row {
       padding: 1.25rem 2.5rem; } }
+  @media screen and (max-width: 1200px) {
+    .dropdown-row .has-image {
+      display: none; } }
 
 .column {
   color: #231f20;
   min-width: 15rem;
   list-style-type: none; }
-  @media screen and (max-width: 1200px) {
-    .column.has-image {
-      display: none; } }
   .column h4 {
     font-weight: bold; }
     @media screen and (max-width: 1200px) {
