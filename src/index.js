@@ -5,15 +5,14 @@ const navItems = document.querySelectorAll('.nav-item');
 
 /*============ active nav link ============*/
 navItems.forEach(navItem => {
-  const activeLink = 'active';
   navItem.addEventListener('mouseenter', function() {
     if (this.firstChild.tagName === 'A') {
-      this.firstChild.classList.add(activeLink);
+      this.firstChild.classList.add('active');
     }
   });
   navItem.addEventListener('mouseleave', function() {
     if (this.firstChild.tagName === 'A') {
-      this.firstChild.classList.remove(activeLink);
+      this.firstChild.classList.remove('active');
     }
   });
 });
