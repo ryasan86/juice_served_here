@@ -56,8 +56,39 @@ header {
   color: white;
   position: relative;
   z-index: 10;
+  display: table;
+  width: 100%;
   b {
     text-decoration: underline;
+  }
+  .github-link {
+    float: right;
+    img {
+      width: 2rem;
+      margin-right: 2rem;
+      vertical-align: middle;
+      &:hover {
+        animation: wobble 1s;
+      }
+    }
+  }
+}
+
+@keyframes wobble {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-30deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  75% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
 
@@ -263,8 +294,8 @@ header {
     margin-bottom: 1rem;
   }
   p {
-    margin-bottom: 2rem;
     @include normal-text;
+    margin-bottom: 2rem;
   }
   button {
     @include orangered-button;

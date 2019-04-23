@@ -49,10 +49,31 @@ header {
   background: #231f20;
   color: white;
   position: relative;
-  z-index: 10; }
+  z-index: 10;
+  display: table;
+  width: 100%; }
   .pencil-ad b {
     text-decoration: underline; }
+  .pencil-ad .github-link {
+    float: right; }
+    .pencil-ad .github-link img {
+      width: 2rem;
+      margin-right: 2rem;
+      vertical-align: middle; }
+      .pencil-ad .github-link img:hover {
+        animation: wobble 1s; }
 
+@keyframes wobble {
+  0% {
+    transform: rotate(0deg); }
+  25% {
+    transform: rotate(-30deg); }
+  50% {
+    transform: rotate(30deg); }
+  75% {
+    transform: rotate(-30deg); }
+  100% {
+    transform: rotate(0deg); } }
 /*============ Navigation ============*/
 .mobile-nav {
   z-index: 10;
@@ -227,8 +248,8 @@ header {
       .hero-text h1 {
         font-size: 2.8rem; } }
   .hero-text p {
-    margin-bottom: 2rem;
-    font-size: 1.8rem; }
+    font-size: 1.8rem;
+    margin-bottom: 2rem; }
     @media screen and (max-width: 601px) {
       .hero-text p {
         font-size: 1.5rem; } }
